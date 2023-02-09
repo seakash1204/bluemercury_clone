@@ -820,4 +820,5 @@ function viewProductDetails(ele, ind) {
     var array = []
     array.push(ele)
     localStorage.setItem("product", JSON.stringify(array))
+    window.location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productDeatails.html"
 }
