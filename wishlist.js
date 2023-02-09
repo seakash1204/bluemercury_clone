@@ -1,7 +1,5 @@
 var wishlistDetails = JSON.parse(localStorage.getItem("cartValue")) || [];
 
-
-
 displayData();
 function displayData() {
     wishlistDetails.map(function (elem) {

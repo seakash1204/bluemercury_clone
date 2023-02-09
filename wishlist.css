@@ -13,6 +13,7 @@
     
 }
 
+
 #wishlistContainer > div{
     width: 100%;
 }
@@ -97,3 +98,10 @@ border: 1px solid gray;
 }
 
 
+.heart{
+    background-color: white;
+    border : none;
+    color: #5e769b;
+    font-size: 25px;
+    cursor: pointer;
+}
