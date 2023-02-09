@@ -412,7 +412,7 @@ function displayFirstGlider(array) {
         var div2 = document.createElement("div")
         div2.setAttribute("class", "product-page-addto-wishlist")
         var i = document.createElement("i")
-        i.setAttribute("class", "fa-regular fa-heart fa-2xl")
+        i.setAttribute("class", "fa-regular fa-heart fa-xl")
 
         var div3 = document.createElement("div")
         var p1 = document.createElement("p")
@@ -466,7 +466,11 @@ function displayFirstGlider(array) {
         div2.append(i, div3)
         div4.append(img)
         div5.append(p4, p5, p6)
-        div6.append(i1, i2, i3, i4, i5)
+        if (ind % 7 == 0 || ind % 4 == 0) {
+            div6.append(i1, i2, i3, i5)
+        } else {
+            div6.append(i1, i2, i3, i4, i5)
+        }
         div1.append(div2, div4, div5, div6)
         console.log(div1)
         if (ind != 0)
@@ -630,7 +634,7 @@ function showFeaturedProduct() {
 
     if (featured == "x") {
         console.log(featured, "1")
-        displayFirstGlider(newArr)
+        window.location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productpage.html"
     } else if (featured == "Price, Low to High") {
         newArr = productArray.sort(function(a, b) {
             return a.price - b.price;
