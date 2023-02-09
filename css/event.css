@@ -1,0 +1,52 @@
+#event-parent-container {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    background-color: #e8e6eb;
+    padding: 40px 0;
+}
+
+#child-container1 {
+    width: 100%;
+    color: #12284c;
+    text-align: center;
+}
+
+#child-container1>h1 {
+    font-size: 50px;
+    margin: -13px 0;
+}
+
+#child-container1>h3 {
+    font-size: 25px;
+}
+
+#child-container2 button {
+    width: 95%;
+    height: 40px;
+    background-color: #12284c;
+    color: white;
+}
+
+#child-container2 h2 {
+    color: #12284c;
+}
+
+#child-container2 p {
+    color: #12284c;
+    width: 95%;
+}
+
+#child-container2 {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+#child-container2>div {
+    width: 50%;
+}
+
+#child-container2>div img {
+    width: 100%;
+}
