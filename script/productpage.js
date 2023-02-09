@@ -413,6 +413,7 @@ function displayFirstGlider(array) {
         div2.setAttribute("class", "product-page-addto-wishlist")
         var i = document.createElement("i")
         i.setAttribute("class", "fa-regular fa-heart fa-2xl")
+
         var div3 = document.createElement("div")
         var p1 = document.createElement("p")
         var p2 = document.createElement("p")
@@ -471,6 +472,14 @@ function displayFirstGlider(array) {
         if (ind != 0)
             document.querySelector(".product-page-container").append(div1)
 
+        i.addEventListener("click", function() {
+            addtoWishlist(ele, ind);
+        })
+        i.style.cursor = "pointer"
+        img.style.cursor = "pointer"
+        img.addEventListener("click", function() {
+            viewProductDetails(ele, ind)
+        });
 
     })
 
@@ -529,6 +538,8 @@ brandArray.map(function(ele, ind) {
     var i = document.createElement("input")
     i.setAttribute("type", "checkbox")
     i.setAttribute("value", ele.toUpperCase())
+    var x = ind + +100
+    i.setAttribute("id", x)
     var p = document.createElement("p")
     p.innerText = ele.toUpperCase()
     div.append(i, p)
@@ -639,7 +650,7 @@ function showFeaturedProduct() {
 }
 
 //filter part by category
-var categoryArray = []
+var categoryArray = JSON.parse(localStorage.getItem("category-array")) || []
 productArray.map(function(ele, ind) {
     document.getElementById(ind).addEventListener("change", filterByCategory)
 
@@ -686,21 +697,28 @@ productArray.map(function(ele, ind) {
 
 
 //filter by brand name
-var categoryArray = []
+var brandArr = JSON.parse(localStorage.getItem("category-array")) || []
 productArray.map(function(ele, ind) {
-    document.getElementById(ind).addEventListener("change", filterByCategory)
+    x = ind + +100
+    console.log(x);
+    if (document.getElementById(x))
+        document.getElementById(x).addEventListener("change", filterByBrand)
 
-    function filterByCategory() {
+    function filterByBrand() {
         if (this.checked) {
+            console.log("yes")
             var filArr = productArray.filter(function(a, i) {
-                return ele.category.toUpperCase() == a.category.toUpperCase();
+                console.log(ele.brand, a.brand)
+                console.log(ele.brand == a.brand)
+                return ele.brand.toUpperCase() == a.brand.toUpperCase();
             })
             filArr.map(function(ele, ind) {
-                categoryArray.push(ele)
+                brandArr.push(ele)
             })
-            localStorage.setItem("category-array", JSON.stringify(categoryArray))
+            console.log(brandArr)
+            localStorage.setItem("category-array", JSON.stringify(brandArr))
 
-            displayFirstGlider(categoryArray)
+            displayFirstGlider(brandArr)
 
         } else {
             newArr = JSON.parse(localStorage.getItem("category-array")) || []
@@ -710,9 +728,9 @@ productArray.map(function(ele, ind) {
 
                 for (i = newArr.length - 1; i >= 0; i--) {
 
-                    if (newArr[i].category.toUpperCase() == ele.category.toLocaleUpperCase()) {
+                    if (newArr[i].brand.toUpperCase() == ele.brand.toLocaleUpperCase()) {
                         newArr.splice(i, 1)
-                        categoryArray.splice(i, 1)
+                        brandArr.splice(i, 1)
                     }
                 }
                 localStorage.setItem("category-array", JSON.stringify(newArr))
@@ -730,3 +748,76 @@ productArray.map(function(ele, ind) {
         }
     }
 })
+
+
+//filter by price
+document.querySelector(".a").addEventListener("change", getByPrice)
+document.querySelector(".b").addEventListener("change", getByPrice)
+document.querySelector(".c").addEventListener("change", getByPrice)
+document.querySelector(".d").addEventListener("change", getByPrice)
+document.querySelector(".e").addEventListener("change", getByPrice)
+document.querySelector(".f").addEventListener("change", getByPrice)
+
+function getByPrice() {
+    var x = event.target.value
+    if (this.checked) {
+        if (x < 51) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 0
+            })
+            displayFirstGlider(temparr)
+        } else if (x < 101) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 50
+            })
+            displayFirstGlider(temparr)
+        } else if (x < 201) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 100
+            })
+            displayFirstGlider(temparr)
+        } else if (x < 301) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 200
+            })
+            displayFirstGlider(temparr)
+        } else if (x < 501) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 300
+            })
+            displayFirstGlider(temparr)
+        } else {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price > x
+            })
+            displayFirstGlider(temparr)
+        }
+    } else {
+        displayFirstGlider(productArray)
+    }
+}
+
+
+
+//add to wish-list
+var wishlistArr = JSON.parse(localStorage.getItem("wishlist-added-product")) || []
+
+function addtoWishlist(ele, ind) {
+    if (ele.added == undefined) {
+        ele.added = "yes"
+        wishlistArr.push(ele)
+        event.target.style.color = "green"
+        localStorage.setItem("wishlist-added-product", JSON.stringify(wishlistArr))
+    } else {
+        alert("Already Added");
+    }
+
+
+
+}
+
+function viewProductDetails(ele, ind) {
+    var array = []
+    array.push(ele)
+    localStorage.setItem("product", JSON.stringify(array))
+}
