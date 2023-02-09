@@ -453,6 +453,7 @@ function displayFirstGlider(array) {
         })
     })
 
+
 }
 
 //go to product details page
