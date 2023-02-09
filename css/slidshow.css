@@ -1,0 +1,36 @@
+#paragraph_slidshow {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    background-color: #d7ebf2;
+    height: 25px;
+    cursor: pointer;
+    margin-top: 15px;
+    justify-content: center;
+}
+
+#paragraph_slidshow>div {
+    height: 23px;
+}
+
+
+/* #paragraph_slidshow>div p {
+    margin-top: px;
+} */
+
+#paragraph_slidshow p {
+    font-size: 12px;
+    text-align: center;
+}
+
+#slides p {
+    width: 100vw;
+    text-align: center;
+    color: #576c86;
+    /* padding-left: 450px; */
+}
+
+#slides {
+    justify-content: center;
+    display: flex;
+    align-items: center;
+}
