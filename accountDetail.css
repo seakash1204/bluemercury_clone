@@ -1,0 +1,42 @@
+#myAccount{
+    margin-top: 200px;
+    width: 35%;
+}
+
+#btn  > a{
+display: block;
+margin: 15px;
+height: 30px;
+width: 400px;
+font-size: 20px;
+cursor: pointer;
+color: gray;
+padding: 10px;
+text-decoration: none;
+border: 1px solid gray;
+} 
+
+#parentBox{
+    display: flex;
+}
+
+#userDetails{
+    display: flex;
+}
+.userIcon{
+    font-size: 50px;
+    border: none;
+    background-color: white;
+}
+.name > h3{
+    margin-top: 5px;
+    margin-left: 5px;
+    margin-bottom: 5px;
+}
+.name > h3 + a{
+    border: none;
+    text-decoration: underline;
+    background-color: white;
+    margin-left: 5px;
+    color: black;
+}
