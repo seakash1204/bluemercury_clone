@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your</title>
+    <link rel="stylesheet" href="newcart.css">
+    <link rel="stylesheet" href="navbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+
+<body>
+    <div id="navbar"></div>
+    <div id="body">
+        <h1 id="your_bag">YOUR BAG</h1>
+        <p id="no_items">Your cart(No. of items)</p>
+        <div id="cart_header">
+            <p>Ready to Ship</p>
+            <div>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p>Total</p>
+            </div>
+        </div>
+        <hr id="horizontal_line">
+        <!-- added cart data will be appended here -->
+        <div class="cart-product-container">
+            <div class="cart-product-child-conatiner">
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/global_images-850038687069-1_240x240.jpg?v=1673039228" 
+            alt="#">
+            </div>
+            <div class="cart-product-details">
+                <h5 id="proname">Sugar Eyeliner</h5>
+                <p id="prodescription">Use for some glossy and different eyes</p>
+            </div>
+            <div class="cart-product-price">
+                <p id="price">$45</p>
+            </div>
+            <div class="poductquantity">
+                <div class="min-max-button">
+                    <div class="button">
+                        <button>-</button>
+                        <button>1</button>
+                        <button>+</button>
+                    </div>
+                    <p class="remove">Remove</p>
+    
+                </div>
+                <div class="quantityprice">Total</div>
+            </div>
+        <div id="cart_container"></div>
+        <div id="offers">
+            <p>
+                Our gift for you
+            </p>
+            <p>Free trial size products with your qualifying purchase</p>
+        </div>
+        <hr>
+       
+        <div id="subtotal">
+            <h3 id="subtotal_price">Subtotal(Price)</h3>
+            <p>Shipping,Taxes,Beauty Cards, and additional discounts applied at the checkout</p>
+        </div>
+
+        <a href="checkout.html">
+            <div id="div"><button id="checkout_button">CHECKOUT</button></div>
+        </a>
+
+    </div>
+    <div id="footer"></div>
+
+</body>
+
+</html>
+
+<script type="module">
+    import { footer, navbar } from "./components/navbar.js"
+    document.getElementById("footer").innerHTML = footer()
+    document.getElementById('navbar').innerHTML = navbar()
+
+</script>
+<script src="newcart.js"></script>

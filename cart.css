@@ -96,3 +96,11 @@ body {
 .checkout-btn button{
     cursor: pointer;
 }
+.cart-product- child-container{
+    display: flex;
+    margin left: 50%;
+
+}
+.proname{
+    margin-left: 25%;
+}
