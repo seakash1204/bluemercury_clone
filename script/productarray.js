@@ -407,7 +407,7 @@ console.log("hii")
 function displayFirstGlider(array) {
     array.map(function(ele, ind) {
         var anchor = document.createElement("a")
-        anchor.setAttribute("href", "file:///E:/bluemercury/BLUEMERCURY-CLONE/landingpage/productDeatails.html")
+        anchor.setAttribute("href", "file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productDeatails.html")
         var div1 = document.createElement("div")
         div1.setAttribute("class", "product-box")
         var div2 = document.createElement("div")
@@ -539,5 +539,5 @@ function gotoDetails(ele, ind) {
     p.push(ele);
     console.log(p)
     localStorage.setItem("product", JSON.stringify(p))
-    window.location.href = "file:///E:/bluemercury/BLUEMERCURY-CLONE/landingpage/productDeatails.html"
+    window.location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productDeatails.html"
 }
