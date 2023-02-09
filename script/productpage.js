@@ -644,7 +644,6 @@ productArray.map(function(ele, ind) {
     document.getElementById(ind).addEventListener("change", filterByCategory)
 
     function filterByCategory() {
-
         if (this.checked) {
             var filArr = productArray.filter(function(a, i) {
                 return ele.category.toUpperCase() == a.category.toUpperCase();
@@ -654,10 +653,32 @@ productArray.map(function(ele, ind) {
             })
             localStorage.setItem("category-array", JSON.stringify(categoryArray))
 
-            console.log(categoryArray)
             displayFirstGlider(categoryArray)
 
         } else {
+            newArr = JSON.parse(localStorage.getItem("category-array")) || []
+            if (newArr.length == 0) {
+                displayFirstGlider(productArray)
+            } else {
+
+                for (i = newArr.length - 1; i >= 0; i--) {
+
+                    if (newArr[i].category.toUpperCase() == ele.category.toLocaleUpperCase()) {
+                        newArr.splice(i, 1)
+                        categoryArray.splice(i, 1)
+                    }
+                }
+                localStorage.setItem("category-array", JSON.stringify(newArr))
+                console.log(newArr)
+                if (newArr.length == 0) {
+                    displayFirstGlider(productArray)
+                } else {
+
+                    displayFirstGlider(newArr)
+                }
+
+            }
+
 
         }
     }
@@ -665,12 +686,11 @@ productArray.map(function(ele, ind) {
 
 
 //filter by brand name
-var brandArray = []
+var categoryArray = []
 productArray.map(function(ele, ind) {
     document.getElementById(ind).addEventListener("change", filterByCategory)
 
     function filterByCategory() {
-
         if (this.checked) {
             var filArr = productArray.filter(function(a, i) {
                 return ele.category.toUpperCase() == a.category.toUpperCase();
@@ -680,10 +700,32 @@ productArray.map(function(ele, ind) {
             })
             localStorage.setItem("category-array", JSON.stringify(categoryArray))
 
-            console.log(categoryArray)
             displayFirstGlider(categoryArray)
 
         } else {
+            newArr = JSON.parse(localStorage.getItem("category-array")) || []
+            if (newArr.length == 0) {
+                displayFirstGlider(productArray)
+            } else {
+
+                for (i = newArr.length - 1; i >= 0; i--) {
+
+                    if (newArr[i].category.toUpperCase() == ele.category.toLocaleUpperCase()) {
+                        newArr.splice(i, 1)
+                        categoryArray.splice(i, 1)
+                    }
+                }
+                localStorage.setItem("category-array", JSON.stringify(newArr))
+                console.log(newArr)
+                if (newArr.length == 0) {
+                    displayFirstGlider(productArray)
+                } else {
+
+                    displayFirstGlider(newArr)
+                }
+
+            }
+
 
         }
     }
