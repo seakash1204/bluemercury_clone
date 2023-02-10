@@ -506,7 +506,25 @@
             margin-top: -1px;
         }
         @media all and (max-width:550px) {
-            .menubar>div:last-child {
+            .dropdown:hover .dropdwon_content2 {
+                display: none;
+                padding-top: 15px;
+            }
+            .dropdown:hover .dropdwon_content6 {
+                display: none;
+                padding-top: 15px;
+            }
+            .dropdown:hover .dropdwon_content5 {
+                display: none;
+                padding-top: 15px;
+            }
+            .menubar>div:nth-child(3) {
+                display: none;
+            }
+            .menubar>div:nth-child(1) {
+                display: none;
+            }
+            .menubar>div:nth-child(4) {
                 display: none;
             }
         }

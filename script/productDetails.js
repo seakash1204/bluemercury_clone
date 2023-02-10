@@ -131,13 +131,16 @@ function addtocart() {
         var quantity = document.getElementById("quantity-btn").innerText
         var price = product[0].price
         var desc = document.getElementById("product-desc").innerText
+        img = product[0].img_url
+
         console.log(name, brand, quantity, price, desc)
         var obj = {
             name: name,
             brand: brand,
             quantity: quantity,
             price: price,
-            desc: desc
+            desc: desc,
+            img_url: img
         }
         cartArray.push(obj)
 
@@ -165,13 +168,15 @@ function addtowishlist() {
         var quantity = document.getElementById("quantity-btn").innerText
         var price = document.getElementById("product-price").innerText
         var desc = document.getElementById("product-desc").innerText
+        img = product[0].img_url
         console.log(name, brand, quantity, price, desc)
         var obj = {
             name: name,
             brand: brand,
             quantity: quantity,
             price: price,
-            desc: desc
+            desc: desc,
+            img_url: img
         }
         wishlistArray.push(obj)
         console.log(wishlistArray);
@@ -180,4 +185,15 @@ function addtowishlist() {
         loveIcon = 2;
         document.getElementById("wishlist-btn").style.color = "#12284c"
     }
+}
+
+function gotoppage() {
+    console.log("hii")
+    window.location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productpage.html")
+}
+
+
+function gotoeventpage() {
+    console.log("hii")
+    window.location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/html/index.html")
 }

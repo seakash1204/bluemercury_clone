@@ -60,3 +60,14 @@
         slides[dotIndex - 1].style.display = "block";
         dots[dotIndex - 1].className += " active";
     }
+
+    function gotoppage() {
+        console.log("hii")
+        window.location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productpage.html")
+    }
+
+
+    function gotoeventpage() {
+        console.log("hii")
+        window.location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/html/index.html")
+    }
