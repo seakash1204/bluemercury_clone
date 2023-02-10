@@ -399,146 +399,430 @@ var productArray = [{
     "brand": "oribe",
     "category": "haircare"
 }]
+console.log(productArray)
 displayFirstGlider(productArray)
 
-console.log("hii")
 
 
 function displayFirstGlider(array) {
+    document.querySelector(".product-page-container").innerText = ""
     array.map(function(ele, ind) {
-        var anchor = document.createElement("a")
-        anchor.setAttribute("href", "file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productDeatails.html")
         var div1 = document.createElement("div")
-        div1.setAttribute("class", "product-box")
+        div1.setAttribute("class", "product-page-child-container")
         var div2 = document.createElement("div")
-        div2.setAttribute("class", "p-img-container")
+        div2.setAttribute("class", "product-page-addto-wishlist")
+        var i = document.createElement("i")
+        i.setAttribute("class", "fa-regular fa-heart fa-xl")
 
         var div3 = document.createElement("div")
-        div3.setAttribute("class", "p-img")
-        var a = document.createElement("a")
-        var img = document.createElement("img")
-        img.setAttribute("src", ele.img_url)
-
-
-        div4 = document.createElement("div")
-        div4.setAttribute("class", "p-box-text")
-        var div5 = document.createElement("div")
-        div5.setAttribute("class", "product-category")
-        var span = document.createElement("span")
-        var b = document.createElement("b")
         var p1 = document.createElement("p")
         var p2 = document.createElement("p")
+        var p3 = document.createElement("p")
+        var div4 = document.createElement("div")
+        var img = document.createElement("img")
+        img.setAttribute("src", ele.img_url)
+        div4.setAttribute("class", "productpage-img")
+        var div5 = document.createElement("div")
+        var p4 = document.createElement("p")
+        p4.setAttribute("id", "productpage-product-name")
+        var p5 = document.createElement("p")
+        p5.setAttribute("id", "productpage-product-category")
+        var p6 = document.createElement("p")
+        p6.setAttribute("id", "productpage-product-price")
+        var div6 = document.createElement("div")
+        var i1 = document.createElement("i")
+        i1.setAttribute("class", "fa-solid fa-star fa-2xs")
 
-        b.innerText = ele.brand.toUpperCase()
-        p1.innerText = ele.desc
-        p2.innerText = "$" + ele.price
+        var i2 = document.createElement("i")
+        i2.setAttribute("class", "fa-solid fa-star fa-2xs")
 
-        // console.log(b.innerText, p1.innerText, p2.innerText)
-        a.append(img)
-        div3.append(a)
-        div2.append(div3)
+        var i3 = document.createElement("i")
+        i3.setAttribute("class", "fa-solid fa-star fa-2xs")
 
-        span.append(b)
-        div5.append(span)
-        p1.style.fontSize = 10;
+        var i4 = document.createElement("i")
+        i4.setAttribute("class", "fa-solid fa-star fa-2xs")
 
-        div4.append(div5, p1, p2)
-        div1.append(div2, div4)
-        anchor.append(div1)
+        var i5 = document.createElement("i")
+        i5.setAttribute("class", "fa-regular fa-star-half-stroke fa-2xs")
+
+        button = document.createElement("button")
+        button.setAttribute("class", "quick-view")
+        if (ind % 7 == 0 || ind % 11 == 0) {
+            p1.innerText = "EXCLUSIVE"
+        }
+        if (ind % 4 == 0 || ind % 11 == 0)
+            p2.innerText = "CONSCIOUS BEAUTY"
+        if (i % 2 == 0) {
+            p1.innerText = "EXCLUSIVE"
+        }
+        if (i % 2 != 0) {
+            p1.innerText = "LIMITED EDITION"
+        }
+        p4.innerText = ele.name
+        p5.innerText = ele.category
+        p6.innerText = "$" + ele.price
+        button.innerText = "QUICK VIEW"
+        div3.append(p1, p2)
+        div2.append(i, div3)
+        div4.append(img)
+        div5.append(p4, p5, p6)
+        if (ind % 7 == 0 || ind % 4 == 0) {
+            div6.append(i1, i2, i3, i5)
+        } else {
+            div6.append(i1, i2, i3, i4, i5)
+        }
+        div1.append(div2, div4, div5, div6)
+        console.log(div1)
         if (ind != 0)
+            document.querySelector(".product-page-container").append(div1)
 
-            document.querySelector(".glider").append(anchor)
-        div1.addEventListener("click", function() {
-            gotoDetails(ele, ind);
+        i.addEventListener("click", function() {
+            addtoWishlist(ele, ind);
         })
+        i.style.cursor = "pointer"
+        img.style.cursor = "pointer"
+        img.addEventListener("click", function() {
+            viewProductDetails(ele, ind)
+        });
+
     })
 
-
 }
+
+
+// document.querySelector(".productpage-img").addEventListener("mouseover", showQuickView)
+
+// function showQuickView() {
+//     console.log("hii")
+//     document.querySelector(".quick-view").style.display = "block"
+// }
+
+
+// document.querySelector("body").addEventListener("mouseover", hideQuickView)
+
+// function hideQuickView() {
+//     console.log("hii")
+//     document.querySelector(".quick-view").style.display = "none"
+// }
+
+
 
 //go to product details page
-function gotoDetails(ele, ind) {
-    var p = []
-    p.push(ele);
-    console.log(p)
-    localStorage.setItem("product", JSON.stringify(p))
-}
+// function gotoDetails(ele, ind) {
+//     var p = []
+//     p.push(ele);
+//     console.log(p)
+//     localStorage.setItem("product", JSON.stringify(p))
+// }
 
+// BRAND FILTER DATE ENTRY
 
-// new Glider(document.querySelector('.glider'), {
-//     slidesToScroll: 1,
-//     slidesToShow: 4,
-//     draggable: true,
-//     dots: '.dots',
-//     arrows: {
-//         prev: '.glider-prev',
-//         next: '.glider-next'
-//     }
-// });
+var brandArray = ["111SLKIN",
+    "AUGUSTINUS BADER",
+    "FRESH",
+    "HARIMAX",
+    "HIGHERDOSE",
+    "TOM FARD",
+    "HIGHERDOSE",
+    "AFRICAN BOTANICS",
+    "BOBBI BROWN",
+    "M-61",
+    "DRYBAR",
+    "DUNE",
+    "SLIP",
+    "OGEE",
+    "SUGUSTNUS BADER",
+    "ORIBE"
+]
 
-
-
-// displayFirstGlider2(productArray)
-
-
-displayFirstGlider2(productArray);
-
-function displayFirstGlider2(productArray) {
-    productArray.map(function(ele, ind) {
-        var div1 = document.createElement("div")
-        div1.setAttribute("class", "product-box2")
-        var div2 = document.createElement("div")
-        div2.setAttribute("class", "p-img-container2")
-
-        var div3 = document.createElement("div")
-        div3.setAttribute("class", "p-img2")
-        var a = document.createElement("a")
-        var img = document.createElement("img")
-        img.setAttribute("src", ele.img_url)
-
-
-        div4 = document.createElement("div")
-        div4.setAttribute("class", "p-box-text2")
-        var div5 = document.createElement("div")
-        div5.setAttribute("class", "product-category2")
-        var span = document.createElement("span")
-        var b = document.createElement("b")
-        var p1 = document.createElement("p")
-        var p2 = document.createElement("p")
-
-        b.innerText = ele.brand.toUpperCase()
-        p1.innerText = ele.desc
-        p2.innerText = "$" + ele.price
-
-        // console.log(b.innerText, p1.innerText, p2.innerText)
-        a.append(img)
-        div3.append(a)
-        div2.append(div3)
-
-        span.append(b)
-        div5.append(span)
-        p1.style.fontSize = 10;
-
-        div4.append(div5, p1, p2)
-        div1.append(div2, div4)
-        console.log(ind)
-
-        if (ind > 10)
-            document.querySelector(".swiper-wrapper").append(div1)
-        div1.addEventListener("click", function() {
-
-            gotoDetails(ele, ind);
-        })
-    })
-
-}
-
-
-function gotoDetails(ele, ind) {
-    var p = []
+brandArray.map(function(ele, ind) {
     console.log("hii")
-    p.push(ele);
-    console.log(p)
-    localStorage.setItem("product", JSON.stringify(p))
-    window.location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productDeatails.html"
+    var div = document.createElement("div")
+
+    var i = document.createElement("input")
+    i.setAttribute("type", "checkbox")
+    i.setAttribute("value", ele.toUpperCase())
+    var x = ind + +100
+    i.setAttribute("id", x)
+    var p = document.createElement("p")
+    p.innerText = ele.toUpperCase()
+    div.append(i, p)
+
+    document.querySelector(".brand-names").append(div)
+
+})
+
+document.querySelector(".brand-tag").addEventListener("click", showBrandDate)
+let n = 1;
+
+function showBrandDate() {
+    if (n == 1) {
+        document.querySelector(".brand-names").style.display = "flex"
+        document.querySelector(".plus").style.display = "none"
+        document.querySelector(".minus").style.display = "flex"
+        n = 2;
+    } else {
+        document.querySelector(".brand-names").style.display = "none"
+        document.querySelector(".plus").style.display = "flex"
+        document.querySelector(".minus").style.display = "none"
+        n = 1;
+    }
+}
+
+
+// CATEGORY FILTER DATE ENTRY
+
+
+productArray.map(function(ele, ind) {
+    console.log("hii")
+    var div = document.createElement("div")
+
+    var i = document.createElement("input")
+    i.setAttribute("type", "checkbox")
+    i.setAttribute("value", ele.category.toUpperCase())
+    var p = document.createElement("p")
+    p.innerText = ele.category.toUpperCase()
+    i.setAttribute("id", ind)
+    p.setAttribute("id", ele)
+
+    div.append(i, p)
+
+    document.querySelector(".category-names").append(div)
+
+})
+
+document.querySelector(".category-tag").addEventListener("click", showCategoryData)
+let o = 1;
+
+function showCategoryData() {
+    if (o == 1) {
+        document.querySelector(".category-names").style.display = "flex"
+        document.querySelector(".plus1").style.display = "none"
+        document.querySelector(".minus1").style.display = "flex"
+        o = 2;
+    } else {
+        document.querySelector(".category-names").style.display = "none"
+        document.querySelector(".plus1").style.display = "flex"
+        document.querySelector(".minus1").style.display = "none"
+        o = 1;
+    }
+}
+
+
+document.querySelector(".Price-tag").addEventListener("click", showPriceDate)
+let p = 1;
+
+function showPriceDate() {
+    if (p == 1) {
+        document.querySelector(".price-range").style.display = "flex"
+        document.querySelector(".plus2").style.display = "none"
+        document.querySelector(".minus2").style.display = "flex"
+        p = 2;
+
+    } else {
+        document.querySelector(".price-range").style.display = "none"
+        document.querySelector(".plus2").style.display = "flex"
+        document.querySelector(".minus2").style.display = "none"
+        p = 1;
+    }
+}
+document.getElementById("select").addEventListener("change", showFeaturedProduct)
+
+function showFeaturedProduct() {
+    var featured = document.getElementById("select").value
+    var newArr = productArray;
+
+    if (featured == "x") {
+        console.log(featured, "1")
+        window.location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/productpage.html"
+    } else if (featured == "Price, Low to High") {
+        newArr = productArray.sort(function(a, b) {
+            return a.price - b.price;
+        })
+        displayFirstGlider(newArr)
+
+    } else if (featured == "Price, High to Low") {
+        newArr = productArray.sort(function(a, b) {
+            return b.price - a.price;
+        })
+        displayFirstGlider(newArr)
+
+    }
+
+
+
+}
+
+//filter part by category
+var categoryArray = JSON.parse(localStorage.getItem("category-array")) || []
+productArray.map(function(ele, ind) {
+    document.getElementById(ind).addEventListener("change", filterByCategory)
+
+    function filterByCategory() {
+        if (this.checked) {
+            var filArr = productArray.filter(function(a, i) {
+                return ele.category.toUpperCase() == a.category.toUpperCase();
+            })
+            filArr.map(function(ele, ind) {
+                categoryArray.push(ele)
+            })
+            localStorage.setItem("category-array", JSON.stringify(categoryArray))
+
+            displayFirstGlider(categoryArray)
+
+        } else {
+            newArr = JSON.parse(localStorage.getItem("category-array")) || []
+            if (newArr.length == 0) {
+                displayFirstGlider(productArray)
+            } else {
+
+                for (i = newArr.length - 1; i >= 0; i--) {
+
+                    if (newArr[i].category.toUpperCase() == ele.category.toLocaleUpperCase()) {
+                        newArr.splice(i, 1)
+                        categoryArray.splice(i, 1)
+                    }
+                }
+                localStorage.setItem("category-array", JSON.stringify(newArr))
+                console.log(newArr)
+                if (newArr.length == 0) {
+                    displayFirstGlider(productArray)
+                } else {
+
+                    displayFirstGlider(newArr)
+                }
+
+            }
+
+
+        }
+    }
+})
+
+
+//filter by brand name
+var brandArr = JSON.parse(localStorage.getItem("category-array")) || []
+productArray.map(function(ele, ind) {
+    x = ind + +100
+    console.log(x);
+    if (document.getElementById(x))
+        document.getElementById(x).addEventListener("change", filterByBrand)
+
+    function filterByBrand() {
+        if (this.checked) {
+            console.log("yes")
+            var filArr = productArray.filter(function(a, i) {
+                console.log(ele.brand, a.brand)
+                console.log(ele.brand == a.brand)
+                return ele.brand.toUpperCase() == a.brand.toUpperCase();
+            })
+            filArr.map(function(ele, ind) {
+                brandArr.push(ele)
+            })
+            console.log(brandArr)
+            localStorage.setItem("category-array", JSON.stringify(brandArr))
+
+            displayFirstGlider(brandArr)
+
+        } else {
+            newArr = JSON.parse(localStorage.getItem("category-array")) || []
+            if (newArr.length == 0) {
+                displayFirstGlider(productArray)
+            } else {
+
+                for (i = newArr.length - 1; i >= 0; i--) {
+
+                    if (newArr[i].brand.toUpperCase() == ele.brand.toLocaleUpperCase()) {
+                        newArr.splice(i, 1)
+                        brandArr.splice(i, 1)
+                    }
+                }
+                localStorage.setItem("category-array", JSON.stringify(newArr))
+                console.log(newArr)
+                if (newArr.length == 0) {
+                    displayFirstGlider(productArray)
+                } else {
+
+                    displayFirstGlider(newArr)
+                }
+
+            }
+
+
+        }
+    }
+})
+
+
+//filter by price
+document.querySelector(".a").addEventListener("change", getByPrice)
+document.querySelector(".b").addEventListener("change", getByPrice)
+document.querySelector(".c").addEventListener("change", getByPrice)
+document.querySelector(".d").addEventListener("change", getByPrice)
+document.querySelector(".e").addEventListener("change", getByPrice)
+document.querySelector(".f").addEventListener("change", getByPrice)
+
+function getByPrice() {
+    var x = event.target.value
+    if (this.checked) {
+        if (x < 51) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 0
+            })
+            displayFirstGlider(temparr)
+        } else if (x < 101) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 50
+            })
+            displayFirstGlider(temparr)
+        } else if (x < 201) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 100
+            })
+            displayFirstGlider(temparr)
+        } else if (x < 301) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 200
+            })
+            displayFirstGlider(temparr)
+        } else if (x < 501) {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price < x && ele.price > 300
+            })
+            displayFirstGlider(temparr)
+        } else {
+            var temparr = productArray.filter(function(ele, ind) {
+                return ele.price > x
+            })
+            displayFirstGlider(temparr)
+        }
+    } else {
+        displayFirstGlider(productArray)
+    }
+}
+
+
+
+//add to wish-list
+var wishlistArr = JSON.parse(localStorage.getItem("wishlist-added-product")) || []
+
+function addtoWishlist(ele, ind) {
+    if (ele.added == undefined) {
+        ele.added = "yes"
+        wishlistArr.push(ele)
+        event.target.style.color = "green"
+        localStorage.setItem("wishlist-added-product", JSON.stringify(wishlistArr))
+    } else {
+        alert("Already Added");
+    }
+
+
+
+}
+
+function viewProductDetails(ele, ind) {
+    var array = []
+    array.push(ele)
+    localStorage.setItem("product", JSON.stringify(array))
+    window.location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/productDeatails.html"
 }

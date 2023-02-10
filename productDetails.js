@@ -189,11 +189,11 @@ function addtowishlist() {
 
 function gotoppage() {
     console.log("hii")
-    window.location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/html/productpage.html")
+    window.location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/productpage.html")
 }
 
 
 function gotoeventpage() {
     console.log("hii")
-    window.location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/html/index.html")
+    window.location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/index.html")
 }

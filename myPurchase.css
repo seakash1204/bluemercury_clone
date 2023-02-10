@@ -1,39 +1,42 @@
-#myAccount{
+#myAccount {
     margin-top: 200px;
     width: 35%;
 }
 
-#btn  > a{
-display: block;
-margin: 15px;
-height: 30px;
-width: 400px;
-font-size: 20px;
-cursor: pointer;
-color: gray;
-padding: 10px;
-text-decoration: none;
-border: 1px solid gray;
-} 
+#btn>a {
+    display: block;
+    margin: 15px;
+    height: 30px;
+    width: 400px;
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid gray;
+}
 
-#parentBox{
+#parentBox {
     display: flex;
 }
 
-#userDetails{
+#userDetails {
     display: flex;
 }
-.userIcon{
+
+.userIcon {
     font-size: 50px;
     border: none;
     background-color: white;
 }
-.name > h3{
+
+.name>h3 {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
 }
-.name > h3 + a{
+
+.name>h3+a {
     border: none;
     text-decoration: underline;
     background-color: white;
@@ -41,45 +44,91 @@ border: 1px solid gray;
     color: black;
 }
 
-#myWishlist > a:first-child{
+#myWishlist>a:first-child {
     margin-right: 5px;
 }
-#myWishlist > i + a{
+
+#myWishlist>i+a {
     margin-left: 5px;
 }
-#myWishlist > a{
+
+#myWishlist>a {
     font-size: 20px;
     text-decoration: none;
     color: #12284c;
 }
-#myWishlist{
+
+#myWishlist {
     /* border: 1px solid blueviolet; */
     margin-top: 200px;
-    padding: 30px;
+    /* padding: 30px; */
     width: 55%;
     color: #12284c;
 }
-#wishListBox{
+
+#wishListBox {
     padding: 30px;
-    width: 55%;
+    width: 47%;
+    /* background-color: rgb(210, 234, 234); */
 }
 
-.order{
+.order {
     display: flex;
     font-size: 25px;
     justify-content: space-around;
     text-decoration: underline;
+    box-shadow: #12284c;
 }
 
-#child-order{
-    display: flex;
+.order>button {
+    border: none;
+    font-size: 20px;
+    cursor: pointer;
+    color: teal;
+}
+
+#child-order {
     margin-top: 20px;
     /* justify-content: space-around; */
 }
-#child-order > .search > input{
-    /* width: 200%; */
-    /* float: left; */
-    /* margin-left: -100px; */
-    height: 40px;
-    margin-right: 100px;
+
+#child-order>.search>input {
+    width: 90%;
+    height: 30px;
+    margin-right: 10px;
+    padding-top: 5px;
+    font-size: 25px;
+}
+
+#child-order>.search>input+i {
+    font-size: 30px;
+    color: rgb(64, 140, 165);
+    margin-left: -50px;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+/* medium screen */
+
+@media all and (min-width:768px) and (max-width:1150px) {
+    #parentBox {
+        display: block;
+        ;
+    }
+    #myWishlist {
+        margin-top: 0px;
+    }
+}
+
+
+/* small screen */
+
+@media all and (min-width:0px) and (max-width:767px) {
+    #parentBox {
+        display: block;
+    }
+    #myWishlist {
+        margin-top: 0px;
+    }
 }

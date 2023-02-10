@@ -125,6 +125,10 @@
             line-height: 100px;
             left: 49.5%
         }
+        
+        #totalPrice {
+            font-size: 17px;
+        }
     </style>
 </head>
 
@@ -153,13 +157,13 @@
                     </div>
                     <div class="card-item icon-relative">
                         <label class="label">CVV/CVC:</label>
-                        <input type="text" class="input" id="cvv" placeholder="000" minlength="3" maxlength="3">
+                        <input type="password" class="input" id="cvv" placeholder="" minlength="3" maxlength="3">
                         <i class="fa-solid fa-lock"></i>
                     </div>
                 </div>
 
 
-                <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
+                <button class="btn">Pay <span><i id="totalPrice" class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
 
 
             </div>
@@ -169,6 +173,7 @@
 
 </html>
 <script>
+    document.getElementById("totalPrice").innerText = localStorage.getItem("total-price")
     document.querySelector("button").addEventListener("click", Myinput)
 
     function Myinput() {

@@ -3,8 +3,9 @@ var wishlistDetails = JSON.parse(localStorage.getItem("cartValue")) || [];
 
 
 displayData();
+
 function displayData() {
-    wishlistDetails.map(function (elem) {
+    wishlistDetails.map(function(elem) {
         var productDetails = document.createElement("div");
         var productCategory = document.createElement("p");
         productCategory.textContent = elem.name;
@@ -26,11 +27,16 @@ function displayData() {
 }
 
 
-function order(){
+function order() {
     alert("You haven't purchase anything.. Redirecting to Home page")
 }
 
-function logout(){
+function logout() {
     alert("You have been logged out.. Please visit again..")
     localStorage.clear();
 }
+var userName = JSON.parse(localStorage.getItem("formData"))
+
+
+
+document.getElementById("userName").innerText = userName[0].fname + userName[0].lname
