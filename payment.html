@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,16 +9,18 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
     <link rel="icon" type="image/x-icon" href="https://cdn.xxl.thumbs.canstockphoto.com/planet-mercury-symbol-mercury-sign-abstract-night-sky-background-picture_csp57783177.jpg">
     <style>
-        *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Ubuntu,sans-serif;
+            font-family: Ubuntu, sans-serif;
         }
-        body{
-            background-image:linear-gradient(to right,#adbbcc,#6882a2,#3a4c6a)
+        
+        body {
+            background-image: linear-gradient(to right, #adbbcc, #6882a2, #3a4c6a)
         }
-        .payment{
+        
+        .payment {
             background-color: #16385f;
             max-width: 360px;
             text-align: center;
@@ -28,20 +31,22 @@
             border-radius: 5px;
             position: relative;
         }
-        .payment h4{
+        
+        .payment h4 {
             text-align: center;
             letter-spacing: 1px;
             margin-bottom: 40px;
             color: black
         }
-        .form label{
+        
+        .form label {
             display: block;
             color: #555555;
             margin-bottom: 6px;
             text-align: left;
-            
         }
-        .form input{
+        
+        .form input {
             padding: 13px 0 13px 25px;
             width: 100%;
             text-align: center;
@@ -51,80 +56,83 @@
             outline: none;
             font-size: 16px;
             color: black;
-            
         }
-        .card-grp{
+        
+        .card-grp {
             display: flex;
             justify-content: space-between;
         }
-        .card-item{
-            width:48%
+        
+        .card-item {
+            width: 48%
         }
-        .space{
+        
+        .space {
             margin-bottom: 15px;
         }
-        .icon-relative{
+        
+        .icon-relative {
             position: relative;
         }
-        .icon-relative i{
+        
+        .icon-relative i {
             position: absolute;
             bottom: 12px;
             left: 15px;
             font-size: 20px;
             color: black;
         }
-        .btn{
+        
+        .btn {
             margin-top: 40px;
             width: 100%;
             height: 40px;
             background-color: black;
             text-align: center;
             border-radius: 6px;
-            color:whitesmoke;
+            color: whitesmoke;
             padding: 6px;
             cursor: pointer;
             font-size: 20px;
         }
-       
-        .logo::before{
+        
+        .logo::before {
             content: "";
             overflow: visible;
             position: absolute;
             top: 5px;
-            left :-33px;
+            left: -33px;
             width: 90px;
             height: 90px;
             background: #abb5c0;
             border-radius: 50%;
         }
-        .payment .logo{
-            
+        
+        .payment .logo {
             position: absolute;
             top: -50px;
             transform: translate(-50%);
             line-height: 100px;
-            left:49.5%  
-            
+            left: 49.5%
         }
-
-        .payment .logo i{
+        
+        .payment .logo i {
             padding: 3px;
-            margin-left:12px; 
+            margin-left: 12px;
             position: absolute;
             font-size: 50px;
             transform: translate(-50%);
             line-height: 100px;
-            left:49.5%  
+            left: 49.5%
         }
-
-        
     </style>
 </head>
+
 <body>
     <div class="wrapper">
         <div class="payment">
             <div class="logo"><i class="fa-sharp fa-solid fa-file-invoice"></i></div>
-            
+
             <h4>Enter Card Details</h4>
             <div class="form">
                 <div class="card space icon-relative">
@@ -138,44 +146,44 @@
                     <i class="fa-sharp fa-solid fa-credit-card"></i>
                 </div>
                 <div class="card-grp space">
-                   <div class="card-item icon-relative">
+                    <div class="card-item icon-relative">
                         <label class="label">Expiry mm/yy</label>
-                        <input type="password" class="input"  id="expire" placeholder="00 / 00" minlength="5" maxlength="5" >
-                        <i class="fa-solid fa-calendar-days"></i>   
-                   </div>
-                   <div class="card-item icon-relative">
-                       <label class="label">CVV/CVC:</label>
-                       <input type="text" class="input" id="cvv" placeholder="000" minlength="3" maxlength="3">
-                       <i class="fa-solid fa-lock"></i>
-                  </div>
+                        <input type="password" class="input" id="expire" placeholder="00 / 00" minlength="5" maxlength="5">
+                        <i class="fa-solid fa-calendar-days"></i>
+                    </div>
+                    <div class="card-item icon-relative">
+                        <label class="label">CVV/CVC:</label>
+                        <input type="text" class="input" id="cvv" placeholder="000" minlength="3" maxlength="3">
+                        <i class="fa-solid fa-lock"></i>
+                    </div>
                 </div>
-                <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
-                    
-                
+
+                <a href="D:\MAIN PROJECT\bluemercury_clone\otp.html">
+                    <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
+                </a>
+
             </div>
         </div>
     </div>
 </body>
+
 </html>
 <script>
-    document.querySelector("button").addEventListener("click",Myinput)
-    function Myinput(){
-        var card_num=document.getElementById("c_num").value;
-        var card_expire=document.getElementById("expire").value;
-        var card_cvv=document.getElementById("cvv").value;
+    document.querySelector("button").addEventListener("click", Myinput)
+
+    function Myinput() {
+        var card_num = document.getElementById("c_num").value;
+        var card_expire = document.getElementById("expire").value;
+        var card_cvv = document.getElementById("cvv").value;
         console.log(card_num.length)
-        if (card_num.length!=16){
+        if (card_num.length != 16) {
             alert("check your card number")
         }
-        if(card_expire.length!=5)
-        {
+        if (card_expire.length != 5) {
             alert("check your expire")
         }
-        if(card_cvv.length!=3){
+        if (card_cvv.length != 3) {
             alert("check your cvv")
         }
     }
-    
-
-
 </script>

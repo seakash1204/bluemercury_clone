@@ -98,3 +98,4 @@ function removeEle(ele, ind) {
     localStorage.setItem("cart-added-product", JSON.stringify(cartArr))
 
 }
+// document.getElementById("checkout_button").addEventListener("click",checkOutHere)
