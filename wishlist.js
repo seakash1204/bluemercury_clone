@@ -1,4 +1,4 @@
-var wishlistDetails = JSON.parse(localStorage.getItem("cartValue")) || [];
+var wishlistDetails = JSON.parse(localStorage.getItem("cart-added-product")) || [];
 
 displayData(wishlistDetails);
 function displayData(wishlistDetails) {
@@ -32,13 +32,13 @@ function displayData(wishlistDetails) {
     })
 }
 
-var cart = JSON.parse(localStorage.getItem("cartValue")) || []
+var cart = JSON.parse(localStorage.getItem("cart-added-product")) || []
 function bag(elem, i){
     cart.push(elem)
-    localStorage.setItem("cartValue", JSON.stringify(cart));
+    localStorage.setItem("move-to-cart", JSON.stringify(cart));
 
     wishlistDetails.splice(i, 1)
-    localStorage.setItem("currentpage", JSON.stringify(wishlistDetails))
+    localStorage.setItem("cart-added-product", JSON.stringify(wishlistDetails))
     displayData(wishlistDetails)
 }
 
