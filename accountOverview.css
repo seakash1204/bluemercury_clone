@@ -168,3 +168,24 @@ h1 + h4{
     margin-top: 20px;
 }
 
+
+
+@media all and (min-width:768px) and (max-width:1150px){
+    #parentBox{
+        display: block;;
+    }
+    #myWishlist{
+        margin-top: 0px;
+    }
+}
+
+
+/* small screen */
+@media all and (min-width:0px) and (max-width:767px){
+    #parentBox{
+        display: block;
+    }
+    #myWishlist{
+        margin-top: 0px;
+    }
+}

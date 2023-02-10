@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -7,6 +8,7 @@
     <title>My Purchase</title>
     <link rel="stylesheet" href="myPurchase.css">
 </head>
+
 <body>
     <div id="parentBox">
         <div id="myAccount">
@@ -15,21 +17,22 @@
                     <button class="userIcon"><i class="fa-regular fa-circle-user"></i></button>
                 </div>
                 <div class="name">
-                    <h3 id="username"></h2>
-                    <a href="login.html">LOGOUT</a>
+                    <h3 id="username">
+                        </h2>
+                        <a href="login.html">LOGOUT</a>
                 </div>
             </div>
 
 
             <div id="btn">
                 <a class="link" href="accountOverview.html">Account Overview</a>
-                <a class="link" href="myPurchase.html">My Purchases</a> 
-                <a class="link" href="wishlist.html">My Wishlist</a> 
+                <a class="link" href="myPurchase.html">My Purchases</a>
+                <a class="link" href="wishlist.html">My Wishlist</a>
                 <a class="link" href="accountDetail.html">Account Details + Preferences</a>
             </div>
         </div>
 
-
+        <!-- 10-Feb Start here-->
         <div id="wishListBox">
             <div id="myWishlist">
                 <a href="accountOverview.html">My Account</a>
@@ -41,19 +44,17 @@
                 <button>YOUR ORDERS</button><button>BUY AGAIN</button>
             </div>
             <div id="child-order">
-            <div class="search">
-                <input type="text" placeholder="Search All Orders..." name="search" ><i class="fa-solid fa-magnifying-glass"></i>
-            </div>
-                <div class="selected">
-                <select>
-                    <option value="">Most Recent</option>
-                    <option value="">Highest Total</option>
-                </select>
+                <div class="search">
+                    <input type="text" placeholder="Search All Orders..." name="search"><i
+                        class="fa-solid fa-magnifying-glass" ></i>
+                </div>
+                <h2 style="color: rgb(148, 178, 204);">No Relevant Order Found...</h2>
             </div>
         </div>
-        </div>
+        <!-- 10-Feb end here -->
     </div>
 </body>
+
 </html>
 <script src="myPurchase.js"></script>
 <script src="https://kit.fontawesome.com/1bf84dec3d.js" crossorigin="anonymous"></script>
