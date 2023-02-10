@@ -131,13 +131,16 @@ function addtocart() {
         var quantity = document.getElementById("quantity-btn").innerText
         var price = product[0].price
         var desc = document.getElementById("product-desc").innerText
+        var img = product[0].img_url
+        console.log(img, "hii")
         console.log(name, brand, quantity, price, desc)
         var obj = {
             name: name,
             brand: brand,
             quantity: quantity,
             price: price,
-            desc: desc
+            desc: desc,
+            img_url: img
         }
         cartArray.push(obj)
 
@@ -165,13 +168,15 @@ function addtowishlist() {
         var quantity = document.getElementById("quantity-btn").innerText
         var price = document.getElementById("product-price").innerText
         var desc = document.getElementById("product-desc").innerText
+        var img = product[0].img_url
         console.log(name, brand, quantity, price, desc)
         var obj = {
             name: name,
             brand: brand,
             quantity: quantity,
             price: price,
-            desc: desc
+            desc: desc,
+            img_url: img
         }
         wishlistArray.push(obj)
         console.log(wishlistArray);
