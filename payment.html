@@ -140,7 +140,7 @@
                 <div class="card-grp space">
                    <div class="card-item icon-relative">
                         <label class="label">Expiry mm/yy</label>
-                        <input type="password" class="input"  id="expire" placeholder="00 / 00" minlength="5" maxlength="5" >
+                        <input type="text" class="input"  id="expire" placeholder="00 / 00" minlength="5" maxlength="5" >
                         <i class="fa-solid fa-calendar-days"></i>   
                    </div>
                    <div class="card-item icon-relative">
@@ -149,33 +149,35 @@
                        <i class="fa-solid fa-lock"></i>
                   </div>
                 </div>
-                <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
-                    
-                
+                <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span> <span id="price">864</span> </button>
             </div>
         </div>
     </div>
 </body>
 </html>
 <script>
+    var local=localStorage.getItem("cart-added-product")||[];
+    total=0
+    document.getElementsByClassName("price").textContent=total;
     document.querySelector("button").addEventListener("click",Myinput)
     function Myinput(){
         var card_num=document.getElementById("c_num").value;
         var card_expire=document.getElementById("expire").value;
         var card_cvv=document.getElementById("cvv").value;
-        console.log(card_num.length)
+        
+        str=card_expire[(card_expire.length-1-1 )]+card_expire[(card_expire.length-1)];
+        console.log(str);
         if (card_num.length!=16){
             alert("check your card number")
         }
-        if(card_expire.length!=5)
+        if(card_expire.length!=5 && str>=23)
         {
             alert("check your expire")
         }
         if(card_cvv.length!=3){
             alert("check your cvv")
         }
+        
     }
     
-
-
 </script>

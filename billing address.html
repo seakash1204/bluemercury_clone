@@ -92,17 +92,17 @@
             
             
             <label for=""> Full Name</label>
-            <input type="text">
+            <input type="text" placeholder="full name">
             <label for="">Mobile Number</label>
-            <input type="number">
+            <input type="number" placeholder="Phone number">
             <label for="">Pincode</label>
-            <input type="text">
+            <input type="text" placeholder="Your zip code">
             <label for="">Full Address</label>
-            <input type="text" name="" id="">
+            <input type="text" placeholder="Your complete address">
             <label for="">Landmark</label>
-            <input type="text">
-            <label for="">Town/City</label>
-            <input type="text">
+            <input type="text" placeholder="landmark">
+            <label >Town/City</label>
+            <input type="text" >
             <label for="">State</label>
     <div id="selectors">
             
@@ -152,9 +152,9 @@
                 <option value="" Selected>India</option>
             </select>
         </div>
-            <div class="btn" id=" b">
-                save and continue
-            </div>
+            <button class="btn">save and continue</button>
+                
+          
             
         </form>
     </div>
@@ -162,8 +162,9 @@
 </html>
 <script>
     
-    document.getElementById("b").addEventListener("click",nextpage);
+    document.querySelector("form").addEventListener("click",nextpage);
     function nextpage(){
+        console.log("ghufran")
         location.replace("file:///C:/Users/mdghu/OneDrive/Desktop/blumercury/bluemercury_clone/payment.html")
     }
 
