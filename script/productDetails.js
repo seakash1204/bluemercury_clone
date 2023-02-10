@@ -7,88 +7,88 @@ document.getElementById("product-price").innerText = "$" + product[0].price
 document.getElementById("product-desc").innerText = product[0].desc
 
 
-document.getElementById("p-info-desc").innerText = product[0].desc
+// document.getElementById("p-info-desc").innerText = product[0].desc
 
 
 
-let i = 1;
-document.getElementById("product-info").addEventListener("click", dropDown)
+// let i = 1;
+// document.getElementById("product-info").addEventListener("click", dropDown)
 
-function dropDown() {
-    if (i == 1) {
-        document.getElementById("product-info-dropdown").style.display = "block"
-        document.getElementById("plus").style.display = "none"
-        document.getElementById("minus").style.display = "inline"
-        i = 2;
-    } else {
-        document.getElementById("product-info-dropdown").style.display = "none"
-        document.getElementById("plus").style.display = "inline"
+// function dropDown() {
+//     if (i == 1) {
+//         document.getElementById("product-info-dropdown").style.display = "block"
+//         document.getElementById("plus").style.display = "none"
+//         document.getElementById("minus").style.display = "inline"
+//         i = 2;
+//     } else {
+//         document.getElementById("product-info-dropdown").style.display = "none"
+//         document.getElementById("plus").style.display = "inline"
 
-        document.getElementById("minus").style.display = "none"
-        i = 1;
+//         document.getElementById("minus").style.display = "none"
+//         i = 1;
 
-    }
-}
+//     }
+// }
 
-let j = 1;
-document.getElementById("product-info2").addEventListener("click", dropDown2)
+// let j = 1;
+// document.getElementById("product-info2").addEventListener("click", dropDown2)
 
-function dropDown2() {
-    if (j == 1) {
-        document.getElementById("product-info-dropdown2").style.display = "block"
-        document.getElementById("plus2").style.display = "none"
-        document.getElementById("minus2").style.display = "block"
-        j = 2;
-    } else {
-        document.getElementById("product-info-dropdown2").style.display = "none"
-        document.getElementById("plus2").style.display = "block"
+// function dropDown2() {
+//     if (j == 1) {
+//         document.getElementById("product-info-dropdown2").style.display = "block"
+//         document.getElementById("plus2").style.display = "none"
+//         document.getElementById("minus2").style.display = "block"
+//         j = 2;
+//     } else {
+//         document.getElementById("product-info-dropdown2").style.display = "none"
+//         document.getElementById("plus2").style.display = "block"
 
-        document.getElementById("minus2").style.display = "none"
-        j = 1;
+//         document.getElementById("minus2").style.display = "none"
+//         j = 1;
 
-    }
-}
-
-
-let K = 1;
-document.getElementById("product-info3").addEventListener("click", dropDown3)
-
-function dropDown3() {
-    if (K == 1) {
-        document.getElementById("product-info-dropdown3").style.display = "block"
-        document.getElementById("plus3").style.display = "none"
-        document.getElementById("minus3").style.display = "block"
-        K = 2;
-    } else {
-        document.getElementById("product-info-dropdown3").style.display = "none"
-        document.getElementById("plus3").style.display = "block"
-
-        document.getElementById("minus3").style.display = "none"
-        K = 1;
-
-    }
-}
+//     }
+// }
 
 
-let L = 1;
-document.getElementById("product-info4").addEventListener("click", dropDown4)
+// let K = 1;
+// document.getElementById("product-info3").addEventListener("click", dropDown3)
 
-function dropDown4() {
-    if (L == 1) {
-        document.getElementById("product-info-dropdown4").style.display = "block"
-        document.getElementById("plus4").style.display = "none"
-        document.getElementById("minus4").style.display = "block"
-        L = 2;
-    } else {
-        document.getElementById("product-info-dropdown4").style.display = "none"
-        document.getElementById("plus4").style.display = "block"
+// function dropDown3() {
+//     if (K == 1) {
+//         document.getElementById("product-info-dropdown3").style.display = "block"
+//         document.getElementById("plus3").style.display = "none"
+//         document.getElementById("minus3").style.display = "block"
+//         K = 2;
+//     } else {
+//         document.getElementById("product-info-dropdown3").style.display = "none"
+//         document.getElementById("plus3").style.display = "block"
 
-        document.getElementById("minus4").style.display = "none"
-        console.log("dfsdaf")
-        L = 1;
+//         document.getElementById("minus3").style.display = "none"
+//         K = 1;
 
-    }
-}
+//     }
+// }
+
+
+// let L = 1;
+// document.getElementById("product-info4").addEventListener("click", dropDown4)
+
+// function dropDown4() {
+//     if (L == 1) {
+//         document.getElementById("product-info-dropdown4").style.display = "block"
+//         document.getElementById("plus4").style.display = "none"
+//         document.getElementById("minus4").style.display = "block"
+//         L = 2;
+//     } else {
+//         document.getElementById("product-info-dropdown4").style.display = "none"
+//         document.getElementById("plus4").style.display = "block"
+
+//         document.getElementById("minus4").style.display = "none"
+//         console.log("dfsdaf")
+//         L = 1;
+
+//     }
+// }
 
 // minus button
 document.getElementById("min-btn").addEventListener("click", minusQuantity)
@@ -179,11 +179,5 @@ function addtowishlist() {
         localStorage.setItem("wishlist-added-product", JSON.stringify(wishlistArray))
         loveIcon = 2;
         document.getElementById("wishlist-btn").style.color = "#12284c"
-    } else {
-        var arr = []
-        localStorage.setItem("wishlist-added-product", JSON.stringify(array))
-        loveIcon = 1
-
     }
-
 }
