@@ -24,3 +24,13 @@ function displayData() {
         document.querySelector("#wishlistContainer").append(productDetails);
     })
 }
+
+
+function order(){
+    alert("You haven't purchase anything.. Redirecting to Home page")
+}
+
+function logout(){
+    alert("You have been logged out.. Please visit again..")
+    localStorage.clear();
+}

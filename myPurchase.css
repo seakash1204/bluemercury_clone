@@ -40,3 +40,46 @@ border: 1px solid gray;
     margin-left: 5px;
     color: black;
 }
+
+#myWishlist > a:first-child{
+    margin-right: 5px;
+}
+#myWishlist > i + a{
+    margin-left: 5px;
+}
+#myWishlist > a{
+    font-size: 20px;
+    text-decoration: none;
+    color: #12284c;
+}
+#myWishlist{
+    /* border: 1px solid blueviolet; */
+    margin-top: 200px;
+    padding: 30px;
+    width: 55%;
+    color: #12284c;
+}
+#wishListBox{
+    padding: 30px;
+    width: 55%;
+}
+
+.order{
+    display: flex;
+    font-size: 25px;
+    justify-content: space-around;
+    text-decoration: underline;
+}
+
+#child-order{
+    display: flex;
+    margin-top: 20px;
+    /* justify-content: space-around; */
+}
+#child-order > .search > input{
+    /* width: 200%; */
+    /* float: left; */
+    /* margin-left: -100px; */
+    height: 40px;
+    margin-right: 100px;
+}
