@@ -52,7 +52,6 @@
 }
 
 #offers {
-
     margin-top: 100px;
 }
 
@@ -129,30 +128,120 @@
     border-radius: 5px;
     cursor: pointer;
 }
+
 #offers {
-margin-top: 20%;
+    margin-top: 20%;
 }
+
 #proname {
-margin-left: 15%;
-  margin-top: -20%;
+    margin-left: 15%;
+    margin-top: -20%;
 }
+
 #prodescription {
     margin-left: 15%;
 }
+
 #price {
-    margin-left: 52% ;
+    margin-left: 52%;
     margin-top: -5%;
 }
+
 .button {
-margin-left: 70%;
-margin-top: -5%;
+    margin-left: 70%;
+    margin-top: -5%;
 }
+
 .remove {
     margin-left: 70%;
 }
+
 .quantityprice {
-   margin-left: 90%;
-   margin-top: -5%;
+    margin-left: 90%;
+    margin-top: -5%;
 }
 
+#nprice {
+    margin-top: -5%;
+}
 
+#subprice {
+    margin-top: 70%;
+}
+
+.cart-container {
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    font-size: 22px;
+    border-bottom: 1px solid rgb(190, 183, 183);
+}
+
+.img {
+    /* border: 1px solid black; */
+    width: 180px;
+    /* margin-right: -120px; */
+}
+
+#img {
+    width: 100%;
+}
+
+.cart-product-details {
+    width: 400px;
+    /* border: 1px solid green; */
+    font-size: 16px;
+    padding-left: 20px;
+}
+
+#brand {
+    width: 150px;
+    margin-bottom: -18px;
+}
+
+.single-price {
+    /* margin-left: 100px; */
+    /* border: 1px solid saddlebrown; */
+    width: 200px;
+    text-align: center;
+}
+
+.quantity-btn {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    /* margin-left: -30px; */
+    /* border: 1px solid black; */
+}
+
+.min-max {
+    width: 150px;
+    /* border: 1px solid green; */
+    display: flex;
+    justify-content: center;
+}
+
+#min {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(179, 173, 173);
+}
+
+#max {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(179, 173, 173);
+}
+
+#quantity {
+    width: 40px;
+    height: 40px;
+    background-color: rgb(179, 173, 173);
+}
+
+.total {
+    width: 180px;
+    /* border: 1px solid gray; */
+    text-align: right;
+}
