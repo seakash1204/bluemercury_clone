@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SignIn</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <main>
+        <h2>CREATE ACCOUNT</h2>
+        <P class="pTag">Complete the form below to create a bluemercury.com <br/>account</P>
+        <form role="form" onsubmit="signUp(event);" autocomplete="off">
+            <div class="form-group">
+                <input type="email" name="email" id="email" placeholder="Email*" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="fname" id="fname" placeholder="First Name*" required>
+            </div>
+            <div class="form-group">
+                <input type="text" name="lname" id="lname" placeholder="Last Name*" required>
+            </div>
+            <div class="form-group">
+                <input type="password" name="pwd" id="pwd" placeholder="Password*" required>
+            </div>
+            <div>
+                <div class="requiredField">*Indicates Required Field</div>
+            </div>
+            <div class="form-group">
+                <div>
+                    <p class="accCrPriv">By continuing, you agree to Bluemercury's .<a href="/privacy.html">Privacy Practices</a></p>
+                </div>
+                <button class="submitBtn" type="submit">CREATE ACCOUNT</button>
+            </div>
+        </form>
+        <p class="accCr">Already have a bluemercury.com account? <a href="/signin.html">Sign In</a></p>
+    </main>
+
+    <script type="text/javascript" src="./signin.js"></script>
+</body>
+
+</html>
