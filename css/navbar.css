@@ -6,7 +6,7 @@
     
     #childdiv1 {
         display: flex;
-        justify-content: space-between;
+        justify-content: space-around;
     }
     
     #childdiv1>div {
@@ -50,6 +50,7 @@
         justify-content: center;
         gap: 45px;
         margin-top: -10px;
+        /* border: 2px solid gray; */
     }
     
     .menubar a {
@@ -456,9 +457,9 @@
             gap: 30px;
             justify-content: center;
         }
-        .menubar {
+        /* .menubar {
             display: none;
-        }
+        } */
         #slideset {
             display: none;
         }
@@ -503,5 +504,28 @@
         }
         #heroProduct3 h2 {
             margin-top: -1px;
+        }
+        @media all and (max-width:550px) {
+            .dropdown:hover .dropdwon_content2 {
+                display: none;
+                padding-top: 15px;
+            }
+            .dropdown:hover .dropdwon_content6 {
+                display: none;
+                padding-top: 15px;
+            }
+            .dropdown:hover .dropdwon_content5 {
+                display: none;
+                padding-top: 15px;
+            }
+            .menubar>div:nth-child(3) {
+                display: none;
+            }
+            .menubar>div:nth-child(1) {
+                display: none;
+            }
+            .menubar>div:nth-child(4) {
+                display: none;
+            }
         }
     }
