@@ -142,7 +142,7 @@
                 </div>
                 <div class="card space icon-relative">
                     <label class="label">Card Number:</label>
-                    <input type="password" id="c_num" class="input" placeholder="Card Number" minlength="16" maxlength="16">
+                    <input type="number" id="c_num" class="input" placeholder="Card Number" minlength="16" maxlength="16">
                     <i class="fa-sharp fa-solid fa-credit-card"></i>
                 </div>
                 <div class="card-grp space">
@@ -158,9 +158,9 @@
                     </div>
                 </div>
 
-                <a href="D:\MAIN PROJECT\bluemercury_clone\otp.html">
-                    <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
-                </a>
+
+                <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
+
 
             </div>
         </div>
@@ -176,14 +176,13 @@
         var card_expire = document.getElementById("expire").value;
         var card_cvv = document.getElementById("cvv").value;
         console.log(card_num.length)
-        if (card_num.length != 16) {
-            alert("check your card number")
-        }
-        if (card_expire.length != 5) {
-            alert("check your expire")
-        }
-        if (card_cvv.length != 3) {
-            alert("check your cvv")
+
+
+        if (card_cvv.length != 3 || card_expire.length != 5 || card_num.length > 16 || card_num.length != 16) {
+            alert("check your Entered Details")
+        } else {
+            location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/otp.html")
+
         }
     }
 </script>
