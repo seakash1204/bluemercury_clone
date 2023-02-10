@@ -1,10 +1,6 @@
 var wishlistDetails = JSON.parse(localStorage.getItem("wishlist-added-product")) || [];
 
-var obj = {
-    name: "xyz"
 
-}
-wishlistDetails.push(obj)
 
 
 
@@ -12,7 +8,7 @@ displayData(wishlistDetails);
 
 function displayData(wishlistDetails) {
     console.log(wishlistDetails)
-    document.getElementById("#wishlistContainer").textContent = "";
+    document.getElementById("wishlistContainer").textContent = "";
     wishlistDetails.map(function(elem) {
 
         var productDetails = document.createElement("div");
@@ -35,7 +31,7 @@ function displayData(wishlistDetails) {
         var removeCart = document.createElement("button");
         removeCart.textContent = "REMOVE FROM WISHLIST"
         removeCart.addEventListener("click", function() {
-            removeFromCart(elem)
+            remove(elem)
         });
 
         productDetails.append(productCategory, productImage, productName, productType, productPrice, addToBag, removeCart)
@@ -49,7 +45,6 @@ function bag(elem, i) {
     cart.push(elem)
     localStorage.setItem("cart-added-product", JSON.stringify(cart));
 
-    wishlistDetails.splice(i, 1)
     localStorage.setItem("wishlist-added-product", JSON.stringify(wishlistDetails))
     displayData(wishlistDetails)
 }
@@ -58,6 +53,12 @@ var baglist = JSON.parse(localStorage.getItem("cartValue")) || []
 
 function remove(elem, i) {
     wishlistDetails.splice(i, 1)
-    localStorage.setItem("wislist-added-product", JSON.stringify(wishlistDetails))
+    localStorage.setItem("wishlist-added-product", JSON.stringify(wishlistDetails))
     displayData(wishlistDetails)
 }
+
+var userName = JSON.parse(localStorage.getItem("formData"))
+
+
+
+document.getElementById("fname").innerText = userName[0].fname + userName[0].lname

@@ -125,6 +125,10 @@
             line-height: 100px;
             left: 49.5%
         }
+        
+        #totalPrice {
+            font-size: 17px;
+        }
     </style>
 </head>
 
@@ -159,7 +163,7 @@
                 </div>
 
 
-                <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
+                <button class="btn">Pay <span><i id="totalPrice" class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
 
 
             </div>
@@ -169,6 +173,7 @@
 
 </html>
 <script>
+    document.getElementById("totalPrice").innerText = localStorage.getItem("total-price")
     document.querySelector("button").addEventListener("click", Myinput)
 
     function Myinput() {

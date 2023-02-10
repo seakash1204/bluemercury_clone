@@ -1,8 +1,9 @@
-#wishListBox{
+#wishListBox {
     padding: 30px;
     width: 55%;
 }
-#wishlistContainer{
+
+#wishlistContainer {
     width: 90%;
     float: right;
     display: grid;
@@ -12,16 +13,16 @@
     padding: 20px;
 }
 
-#wishlistContainer > div{
+#wishlistContainer>div {
     width: 100%;
 }
 
-#wishlistContainer > div > img{
+#wishlistContainer>div>img {
     width: 80%;
     margin: auto;
 }
 
-#wishlistContainer > div > button{
+#wishlistContainer>div>button {
     margin-top: 60px;
     display: block;
     width: 100%;
@@ -31,23 +32,27 @@
     border-radius: 20px;
     background-color: yellow;
 }
-#wishlistContainer > div > button:hover{
+
+#wishlistContainer>div>button:hover {
     background-color: teal;
     cursor: pointer;
 }
 
-#myWishlist > a:first-child{
+#myWishlist>a:first-child {
     margin-right: 5px;
 }
-#myWishlist > i + a{
+
+#myWishlist>i+a {
     margin-left: 5px;
 }
-#myWishlist > a{
+
+#myWishlist>a {
     font-size: 20px;
     text-decoration: none;
     color: #12284c;
 }
-#myWishlist{
+
+#myWishlist {
     /* border: 1px solid blueviolet; */
     margin-top: 200px;
     padding: 30px;
@@ -55,42 +60,45 @@
     color: #12284c;
 }
 
-#myAccount{
+#myAccount {
     margin-top: 200px;
     width: 35%;
 }
 
-#btn  > a{
-display: block;
-margin: 15px;
-height: 30px;
-width: 400px;
-font-size: 20px;
-cursor: pointer;
-color: gray;
-padding: 10px;
-text-decoration: none;
-border: 1px solid gray;
-} 
+#btn>a {
+    display: block;
+    margin: 15px;
+    height: 30px;
+    width: 400px;
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid gray;
+}
 
-#parentBox{
+#parentBox {
     display: flex;
 }
 
-#userDetails{
+#userDetails {
     display: flex;
 }
-.userIcon{
+
+.userIcon {
     font-size: 50px;
     border: none;
     background-color: white;
 }
-.name > h3{
+
+.name>h3 {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
 }
-.name > h3 + a{
+
+.name>h3+a {
     border: none;
     text-decoration: underline;
     background-color: white;
@@ -98,10 +106,11 @@ border: 1px solid gray;
     color: black;
 }
 
-.reward > p{
+.reward>p {
     margin-right: 20px;
 }
-.spend{
+
+.spend {
     display: flex;
     background-color: #12284c;
     color: white;
@@ -110,16 +119,18 @@ border: 1px solid gray;
     align-items: center;
     width: 80%;
 }
-.spend > div{
+
+.spend>div {
     margin-right: 50px;
     padding: 20px;
     font-size: 25px;
 }
-#myWishlist > h2{
+
+#myWishlist>h2 {
     margin-bottom: 60px;
 }
 
-.member{
+.member {
     margin-top: 15px;
     width: 169%;
     border: 1px solid blueviolet;
@@ -128,15 +139,18 @@ border: 1px solid gray;
     padding-bottom: 50px;
     border: 1px solid lightblue;
 }
-.member > h1{
-    font-family:sans-serif;
+
+.member>h1 {
+    font-family: sans-serif;
     color: #12284c;
 }
-h1 + h4{
+
+h1+h4 {
     margin-bottom: 5px;
     color: #12284c;
 }
-.order{
+
+.order {
     width: 175%;
     text-align: left;
     height: 50px;
@@ -146,25 +160,49 @@ h1 + h4{
     border: 1px solid lightblue;
 }
 
-.purchase > button{
+.purchase>button {
     margin-top: 20px;
 }
-.purchase{
+
+.purchase {
     margin-top: 40px;
 }
-.purchase > p{
+
+.purchase>p {
     margin-right: 20px;
     color: #12284c;
 }
 
-.wish > p{
+.wish>p {
     margin: 20px;
     margin-left: 30px;
     color: #12284c;
     /* margin-top: 20px;
     margin-bottom: 20px; */
 }
-.wish >div{
+
+.wish>div {
     margin-top: 20px;
 }
 
+@media all and (min-width:768px) and (max-width:1150px) {
+    #parentBox {
+        display: block;
+        ;
+    }
+    #myWishlist {
+        margin-top: 0px;
+    }
+}
+
+
+/* small screen */
+
+@media all and (min-width:0px) and (max-width:767px) {
+    #parentBox {
+        display: block;
+    }
+    #myWishlist {
+        margin-top: 0px;
+    }
+}
