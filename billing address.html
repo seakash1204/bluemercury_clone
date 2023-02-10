@@ -1,24 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    
+
     <link rel="icon" type="image/x-icon" href="https://cdn.xxl.thumbs.canstockphoto.com/planet-mercury-symbol-mercury-sign-abstract-night-sky-background-picture_csp57783177.jpg">
     <style>
-         *{
+        * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: Ubuntu,sans-serif;
+            font-family: Ubuntu, sans-serif;
         }
-        body{
-            background-image:linear-gradient(to right,#adbbcc,#6882a2,#3a4c6a)
+        
+        body {
+            background-image: linear-gradient(to right, #adbbcc, #6882a2, #3a4c6a)
         }
-        .address{
-           background-color: white;
+        
+        .address {
+            background-color: white;
             max-width: 600px;
             text-align: center;
             height: 590px;
@@ -28,16 +31,16 @@
             border-radius: 5px;
             position: relative;
         }
-        form label{
+        
+        form label {
             display: block;
             color: black;
             margin-bottom: 5px;
-             margin-left: 24px;
+            margin-left: 24px;
             text-align: left;
-            
         }
+        
         form input {
-           
             padding: 13px;
             width: 90%;
             height: 30px;
@@ -48,65 +51,64 @@
             outline: none;
             font-size: 16px;
             border-color: aliceblue;
-           
-            
         }
-        #c,#cs{
-           position: relative;
-           display: flex;
-           width: 50%;
-           height: 30px;
-           margin-left: 25px;
-           border-color: aliceblue;
-
+        
+        #c,
+        #cs {
+            position: relative;
+            display: flex;
+            width: 50%;
+            height: 30px;
+            margin-left: 25px;
+            border-color: aliceblue;
         }
-        .btn{
+        
+        .btn {
             margin-top: 5px;
             width: 90%;
             height: 40px;
-            background-color:black;
+            background-color: black;
             text-align: center;
             border-radius: 5px;
-            color:whitesmoke;
+            color: whitesmoke;
             padding: 6px;
             cursor: pointer;
             font-size: 20px;
             margin-top: 18px;
             margin-left: 20px;
         }
-        .payment h3{
+        
+        .payment h3 {
             text-align: center;
             letter-spacing: 1px;
             margin-bottom: 40px;
             color: black
         }
-       
-       
-
     </style>
 </head>
+
 <body>
     <div class="address">
-        <form >
+        <form>
             <h3>Delivery Location / Address</h3>
-            
-            
+
+
             <label for=""> Full Name</label>
-            <input type="text">
+            <input class="a" type="text">
             <label for="">Mobile Number</label>
-            <input type="number">
+            <input class="b" type="number">
             <label for="">Pincode</label>
-            <input type="text">
+            <input class="c" type="text">
             <label for="">Full Address</label>
-            <input type="text" name="" id="">
+            <input class="d" type="text" name="" id="">
             <label for="">Landmark</label>
-            <input type="text">
+            <input class="e" type="text">
             <label for="">Town/City</label>
-            <input type="text">
+            <input class="f" type="text">
             <label for="">State</label>
-    <div id="selectors">
-            
-        <select id="cs" name="country-state">
+            <div id="selectors">
+
+                <select class="g" id="cs" name="country-state">
             <option value="">Select States</option>
             <option value="AN">Andaman and Nicobar Islands</option>
             <option value="AP">Andhra Pradesh</option>
@@ -146,26 +148,39 @@
             <option value="UT">Uttarakhand</option>
             <option value="WB">West Bengal</option>
         </select>
-        <label for="">Country</label>
-            <select name="" id="c" >
+                <label for="">Country</label>
+                <select name="" id="c">
                 <option value="us">US</option>
                 <option value="" Selected>India</option>
             </select>
-        </div>
-            <div class="btn" id=" b">
+            </div>
+            <div class="btn">
                 save and continue
             </div>
-            
+
         </form>
     </div>
 </body>
+
 </html>
 <script>
-    
-    document.getElementById("b").addEventListener("click",nextpage);
-    function nextpage(){
-        location.replace("file:///C:/Users/mdghu/OneDrive/Desktop/blumercury/bluemercury_clone/payment.html")
-    }
+    document.querySelector(".btn").addEventListener("click", nextpage);
 
-    
+    function nextpage() {
+
+        var name = document.querySelector(".a").value
+        var no = document.querySelector(".b").value
+        var pin = document.querySelector(".c").value
+        var address = document.querySelector(".d").value
+        var land = document.querySelector(".e").value
+        var town = document.querySelector(".f").value
+        var state = document.querySelector(".g").value
+        if (name == "" || no == "" || pin == "" || address == "" || land == "" || town == "" || state == "") {
+            alert("Please Fill All The Details")
+        } else {
+            location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/payment.html")
+        }
+
+        console.log(name)
+    }
 </script>

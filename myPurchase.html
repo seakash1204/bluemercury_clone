@@ -1,13 +1,291 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>My Purchase</title>
     <link rel="stylesheet" href="myPurchase.css">
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\css\navbar.css">
+
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\css\footer.css">
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\css\slidshow.css">
 </head>
+
 <body>
+    <div id="navbar">
+        <div id="childdiv1">
+            <div>
+                <a id="location" href="https://www.google.com/maps/search/bluemercury+address+new+york/@40.8491735,-74.028829,10z/data=!3m1!4b1" target="_blank"><i id="location" class="fa-solid fa-location-arrow"></i>
+                    <p>STORE & SPA LOCATOR</p></a>
+            </div>
+            <div>
+                <a href="D:\MAIN PROJECT\bluemercury_clone\wishlist.html"><i class="fa-regular fa-heart"></i>
+                    <p>WISHLIST</p></a>
+                <i id="search" class="fa-solid fa-magnifying-glass" onclick="doIt()"></i>
+                <p>SEARCH</p>
+
+                <a href="D:\MAIN PROJECT\bluemercury_clone\accountOverview.html"><i class="fa-regular fa-circle-user"></i>
+    <p>ACCOUNT</p></a>
+                <a href="D:\MAIN PROJECT\bluemercury_clone\newcart.html"> <i class="fa-solid fa-bag-shopping"></i>
+                    <p>BAG</p>
+                </a>
+
+            </div>
+        </div>
+        <div id="childdiv2">
+            <a href="D:\MAIN PROJECT\bluemercury_clone\html\index.html">
+                <h2>bluemercury</h2>
+            </a>
+        </div>
+    </div>
+    <div id="myOverlay" class="overlay">
+
+        <div class="overlay-content">
+            <i id="searchIcon" class="fa-solid fa-magnifying-glass"></i>
+            <i id="closeIcon" class="fa-solid fa-xmark"></i>
+
+            <form action="/action_page.php">
+                <input type="text" placeholder="Search" name="search">
+            </form>
+        </div>
+    </div>
+    <br>
+
+
+
+    <!-- //menu bar// -->
+    <div class="menubar">
+        <div class="dropdown">
+            <button onclick="gotoppage()" class="dropbtn">SHOP</button>
+            <div class="dropdwon_content1">
+                <div class="dropdown_container">
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><b>By Category</b></a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Skin Care</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Make Up</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Hair Care</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Bath & Body</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Tools & Accessories</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Home & Lifestyle</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Sun Care</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Men</a>
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><b>By Brand</b></a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">111Skin</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Augustimus Bader                            </a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Bobbi Brown</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Drybar</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Oribe</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">frican Botanics</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Fresh</a>
+                    </div>
+                    <div>
+                        <a href=""><br></a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">HairMax</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Slip</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">HigherDose</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Volo Beauty</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">M-61</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Tom Fard</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Augustnus Bader</a>
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/January-Bestsellers_4x5_6112e149-c5bc-43b1-b0dc-329fc0b9294f_303x303.jpg?v=1673404863" alt="">
+                            <h4>The Must-Have Products You Need Now</h4>
+                            <p>Skin nourishers shimmery shadows+ more</p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="gotoppage()" class="dropbtn">NEW</button>
+            <div class="dropdwon_content2">
+                <div class="dropdown_container">
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><b>By Category</b></a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Skin Care</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Make Up</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Hair Care</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Bath & Body</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Tools & Accessories</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Home & Lifestyle</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Sun Care</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Men</a>
+                    </div>
+
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/m61-Vitablast-C-Serum-Concentrate_lifestyle03_303x303.jpg?v=1674053365" alt="">
+                            <h4>New Arrival</h4>
+                            <p>Form our most loved Brands!</p>
+                        </a>
+
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/January-Bestsellers_4x5_6112e149-c5bc-43b1-b0dc-329fc0b9294f_303x303.jpg?v=1673404863" alt="">
+                            <h4>The Must-Have Products You Need Now</h4>
+                            <p>Provide a brighter, more even-toned complexion</p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="gotoppage()" class="dropbtn">BRAND</button>
+            <div class="dropdwon_content3">
+                <div class="dropdown_container">
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><b>SHOP ALL BRANDS</b></a>
+
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><b>BESTSELLERS</b></a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Augustinus Bader</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Chantecaille</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Dr. Barbara Sturm</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Diptque</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Dyson</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Eltamd</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">La Mer</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Lune Aster</a>
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><b>#NEWATBLUE</b></a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Higherdose</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Irene Forte</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Maison La Bougie</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Nood</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Ogee</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Ourself</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Pat  Mcgrath Labs</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">U Beauty</a>
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><b>WELLNESS</b></a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Alo</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Bala</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Canopy</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Furtuna Skin</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Indie Lee</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">NuFace</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Costa Brazil</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Odacite</a>
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><b>DIVERSE FOUNDED</b></a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">AAPI Founded</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Black Founded</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Hispani Founded</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Bath & Body</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Women Founded</a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <div class="dropdown">
+            <button onclick="gotoppage()" class="dropbtn">EXPLORE</button>
+            <div class="dropdwon_content4">
+                <div class="dropdown_container">
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">FEATURED</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">#ExclusivelyBlue</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Blue Notes</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Buying Guides</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Conscious Beauty</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"> Routine Reboot</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"> The Cache</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">The Founders Series</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">Wedding Essentials</a>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html">MORE</a>
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Valentines_Day_Gifting_Bluemercury_2301_IL0291_303x303.jpg?v=1674666445" alt="">
+                            <h4>Valentine's Day Gifts</h4>
+                            <p>Celebrate Your Sweetie or yourself!</p>
+                        </a>
+
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\productpage.html"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bhm-2023-hero-mob_2bde3652-5f35-4ed2-b7dd-fe0b1d280d9f_303x303.jpg?v=1675196386" alt="">
+                            <h4>Celebrating Black Owners</h4>
+                            <p>Spotlighting our favorite Black-owned brands</p>
+                        </a>
+
+                    </div>
+
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button onclick="gotoeventpage()" class="dropbtn">EVENTS</button>
+            <div class="dropdwon_content5">
+                <div class="dropdown_container">
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\event.html" alt="">
+                            <h4>Bluemercury Presents: #Masterclass</h4>
+                            <p>Join us for live virtual shopping events!</p>
+                        </a>
+
+                    </div>
+                    <div>
+                        <a href="D:\MAIN PROJECT\bluemercury_clone\html\event.html"><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/Come_See_Us_Nav_Flyout_303x303.jpg?v=1666964048" alt="">
+                            <h4>Join us in Store!</h4>
+                            <p>Our Beauty Experts are here in your neighborhood
+                            </p>
+                        </a>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="dropdown">
+            <button class="dropbtn">BLUEREWARDS</button>
+            <div class="dropdwon_content6">
+                <div class="dropdown_container">
+                    <div>
+                        <a href="">My Account</a>
+                        <a href=""><b>Account Overview</b></a>
+                        <a href="">My Purchases</a>
+                        <a href="">My Blue Rewards</a>
+                        <a href="">My Wishlists</a>
+
+
+                    </div>
+                    <div>
+                        <a href=""><img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/bluerewards_2_303x303.jpg?v=1635345372" alt="">
+                            <h4>Earn $10 for every $250</h4>
+                            <p>Free to Join! Learn More></p>
+                        </a>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+    <!-- //slidebar -->
+    <div id="paragraph_slidshow" onclick="slideShow(1)">
+        <div id="slides">
+            <p>Free Shippint for Blue Reward Member</p>
+        </div>
+        <div id="slides">
+            <p>Free Sample with All Order</p>
+        </div>
+        <div id="slides">
+            <p>Free Gift with Purchase..</p>
+        </div>
+    </div>
+
     <div id="parentBox">
         <div id="myAccount">
             <div id="userDetails">
@@ -15,16 +293,17 @@
                     <button class="userIcon"><i class="fa-regular fa-circle-user"></i></button>
                 </div>
                 <div class="name">
-                    <h3 id="username"></h2>
-                    <a href="login.html">LOGOUT</a>
+                    <h3 id="username">
+                        </h2>
+                        <a href="login.html">LOGOUT</a>
                 </div>
             </div>
 
 
             <div id="btn">
                 <a class="link" href="accountOverview.html">Account Overview</a>
-                <a class="link" href="myPurchase.html">My Purchases</a> 
-                <a class="link" href="wishlist.html">My Wishlist</a> 
+                <a class="link" href="myPurchase.html">My Purchases</a>
+                <a class="link" href="wishlist.html">My Wishlist</a>
                 <a class="link" href="accountDetail.html">Account Details + Preferences</a>
             </div>
         </div>
@@ -41,19 +320,22 @@
                 <button>YOUR ORDERS</button><button>BUY AGAIN</button>
             </div>
             <div id="child-order">
-            <div class="search">
-                <input type="text" placeholder="Search All Orders..." name="search" ><i class="fa-solid fa-magnifying-glass"></i>
-            </div>
+                <div class="search">
+                    <input type="text" placeholder="Search All Orders..." name="search"><i class="fa-solid fa-magnifying-glass"></i>
+                </div>
                 <div class="selected">
-                <select>
+                    <select>
                     <option value="">Most Recent</option>
                     <option value="">Highest Total</option>
                 </select>
+                </div>
             </div>
-        </div>
         </div>
     </div>
 </body>
+
 </html>
+<script src="D:\MAIN PROJECT\bluemercury_clone\script\slider1.js"></script>
+<script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
 <script src="myPurchase.js"></script>
 <script src="https://kit.fontawesome.com/1bf84dec3d.js" crossorigin="anonymous"></script>

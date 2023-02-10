@@ -1,31 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
+        body {
             margin: 0;
             padding: 0;
             height: 100vh;
             background: #000000;
-            background-image:linear-gradient(to right,#adbbcc,#6882a2)
+            background-image: linear-gradient(to right, #adbbcc, #6882a2)
         }
-        .container{
+        
+        .container {
             display: flex;
             flex-flow: column;
             height: 100%;
             align-items: space-around;
             justify-content: center;
         }
-        .userInput{
+        
+        .userInput {
             display: flex;
             justify-content: center;
-
         }
-        input{
+        
+        input {
             margin: 10px;
             height: 30px;
             width: 65px;
@@ -35,7 +38,8 @@
             font-size: 1.1rem;
             background: #eef2f3;
         }
-        button{
+        
+        button {
             width: 150px;
             height: 40px;
             margin: 25px auto 0px auto;
@@ -44,48 +48,51 @@
             border-radius: 5px;
             letter-spacing: 2px;
             cursor: pointer;
-            background-color:#16385f;
+            background-color: #16385f;
             color: white;
         }
-        h1{
+        
+        h1 {
             text-align: center;
             font-family: arimo;
             color: honeydew;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
-        <h1 >ENTER OTP</h1>
+        <h1>ENTER OTP</h1>
         <div class="userInput">
             <input type="text" id="1st" maxlength="1" onkeyup="clickEvent(this,'2nd')">
-            <input type="text"  id ="2nd" maxlength="1" onkeyup="clickEvent(this,'3rd')" >
+            <input type="text" id="2nd" maxlength="1" onkeyup="clickEvent(this,'3rd')">
             <input type="text" id="3rd" maxlength="1" onkeyup="clickEvent(this,'4th')">
             <input type="text" id="4th" maxlength="1">
         </div>
-        <button>CONFIRM</button>
+        <button>  CONFIRM</button>
     </div>
 </body>
+
 </html>
 <script type="text/javascript">
-    function  clickEvent(first,last){
-        if(first.value.length){
+    function clickEvent(first, last) {
+        if (first.value.length) {
             document.getElementById(last).focus();
         }
 
     }
-    document.querySelector("button").addEventListener("click",next)
-    function next(){
-        var st=document.getElementById("1st").value;
-        var sec=document.getElementById("2nd").value;
-        var rd=document.getElementById("3rd").value;
-        var th=document.getElementById("4th").value;
-        console.log(st+sec+rd+th)
-        if (st==1 && sec==7 && rd==2 && th==9){
-           location.replace("file:///C:/Users/mdghu/OneDrive/Desktop/blumercury/bluemercury_clone/css/lastpage.html")
-            
-        }
-        else{
+    document.querySelector("button").addEventListener("click", next)
+
+    function next() {
+        var st = document.getElementById("1st").value;
+        var sec = document.getElementById("2nd").value;
+        var rd = document.getElementById("3rd").value;
+        var th = document.getElementById("4th").value;
+        console.log(st + sec + rd + th)
+        if (st == 1 && sec == 7 && rd == 2 && th == 9) {
+            location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/lastpage.html")
+
+        } else {
             alert("Entered wrong otp")
         }
     }
