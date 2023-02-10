@@ -35,7 +35,7 @@ function signIn(e) {
         alert("Incorrect login credentials/ user not register");
     }
     else{
-        location.href = "/";
+        window.location.href = "C:\Users\acer\Desktop\projectMain\bluemercury_clone\signup.html";
         alert(firstName,);
     }
     e.preventDefault();
