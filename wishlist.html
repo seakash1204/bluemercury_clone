@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Account Detail</title>
-    <link rel="stylesheet" href="accountDetail.css">
+    <title>WishList</title>
+    <link rel="stylesheet" href="wishlist.css">
 </head>
+
 <body>
     <div id="parentBox">
         <div id="myAccount">
@@ -15,21 +17,37 @@
                     <button class="userIcon"><i class="fa-regular fa-circle-user"></i></button>
                 </div>
                 <div class="name">
-                    <h3>Akash Kumar</h2>
-                    <a href="login.html">LOGOUT</a>
+                    <h3>Akash Kumar</h3>
+                        <a href="login.html">LOGOUT</a>
                 </div>
             </div>
 
 
             <div id="btn">
                 <a class="link" href="accountOverview.html">Account Overview</a>
-                <a class="link" href="myPurchase.html">My Purchases</a> 
-                <a class="link" href="wishlist.html">My Wishlist</a> 
+                <a class="link" href="myPurchase.html">My Purchases</a>
+                <a class="link" href="wishlist.html">My Wishlist</a>
                 <a class="link" href="accountDetail.html">Account Details + Preferences</a>
             </div>
         </div>
 
+
+        <div id="wishListBox">
+            <div id="myWishlist">
+                <a href="accountOverview.html">My Account</a>
+                <i class="fa-solid fa-greater-than"></i>
+                <a href="accountOverview.html">My Wishlist</a>
+                <h2>WISHLIST</h2>
+            </div>
+
+            <div id="wishlistContainer">
+                <button class="heart"><i class="fa-solid fa-heart-circle-minus"></i></button>
+            </div>
+        </div>
+    </div>
+    </div>
 </body>
+
 </html>
-<script src="accountDetail.js"></script>
+<script src="wishlist.js"></script>
 <script src="https://kit.fontawesome.com/1bf84dec3d.js" crossorigin="anonymous"></script>

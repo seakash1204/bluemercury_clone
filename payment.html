@@ -6,6 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Payment Gateway</title>
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.2.0/css/all.css">
+    <link rel="icon" type="image/x-icon" href="https://cdn.xxl.thumbs.canstockphoto.com/planet-mercury-symbol-mercury-sign-abstract-night-sky-background-picture_csp57783177.jpg">
     <style>
         *{
             margin: 0;
@@ -133,26 +134,48 @@
                 </div>
                 <div class="card space icon-relative">
                     <label class="label">Card Number:</label>
-                    <input type="password" class="input" placeholder="Card Number" minlength="16" maxlength="16">
+                    <input type="password" id="c_num" class="input" placeholder="Card Number" minlength="16" maxlength="16">
                     <i class="fa-sharp fa-solid fa-credit-card"></i>
                 </div>
                 <div class="card-grp space">
                    <div class="card-item icon-relative">
                         <label class="label">Expiry mm/yy</label>
-                        <input type="password" class="input"  placeholder="00 / 00" minlength="5" maxlength="5" >
+                        <input type="password" class="input"  id="expire" placeholder="00 / 00" minlength="5" maxlength="5" >
                         <i class="fa-solid fa-calendar-days"></i>   
                    </div>
                    <div class="card-item icon-relative">
                        <label class="label">CVV/CVC:</label>
-                       <input type="text" class="input"  placeholder="000" minlength="3" maxlength="3">
+                       <input type="text" class="input" id="cvv" placeholder="000" minlength="3" maxlength="3">
                        <i class="fa-solid fa-lock"></i>
                   </div>
                 </div>
-                <div class="btn">
-                    Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span>
-                </div>
+                <button class="btn">Pay <span><i class="fa-sharp fa-solid fa-dollar-sign"></i></span></button>
+                    
+                
             </div>
         </div>
     </div>
 </body>
 </html>
+<script>
+    document.querySelector("button").addEventListener("click",Myinput)
+    function Myinput(){
+        var card_num=document.getElementById("c_num").value;
+        var card_expire=document.getElementById("expire").value;
+        var card_cvv=document.getElementById("cvv").value;
+        console.log(card_num.length)
+        if (card_num.length!=16){
+            alert("check your card number")
+        }
+        if(card_expire.length!=5)
+        {
+            alert("check your expire")
+        }
+        if(card_cvv.length!=3){
+            alert("check your cvv")
+        }
+    }
+    
+
+
+</script>
