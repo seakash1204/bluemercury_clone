@@ -21,6 +21,10 @@
     margin: auto;
 }
 
+#myAccount {
+    margin-right: 20px;
+}
+
 #wishlistContainer>div>button {
     margin-top: 20px;
     display: block;

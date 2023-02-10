@@ -19,7 +19,7 @@ const signUp = e => {
         document.getElementById('fname').focus();
         alert("Account Created.\n\nPlease Sign In using the link below.");
     } else {
-        alert("Ooopppssss... Duplicate found!!!\nYou have already sigjned up");
+        alert("Ooopppssss... Duplicate found!!!\nYou have already signed up");
     }
     e.preventDefault();
 }
@@ -34,7 +34,7 @@ function signIn(e) {
     if (!exist) {
         alert("Incorrect login credentials/ user not register");
     } else {
-        location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/html/index.html";
+        location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/index.html";
         alert(firstName, );
     }
     e.preventDefault();
