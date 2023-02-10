@@ -26,15 +26,17 @@ const signUp = e => {
 }
 
 function signIn(e) {
+    let firstName = "Hey, " + document.getElementById('email').value + ", login successfully";
     let email = document.getElementById('email').value, pwd = document.getElementById('pwd').value;
     let formData = JSON.parse(localStorage.getItem('formData')) || [];
     let exist = formData.length && 
     JSON.parse(localStorage.getItem('formData')).some(data => data.email.toLowerCase() == email && data.pwd.toLowerCase() == pwd);
     if(!exist){
-        alert("Incorrect login credentials");
+        alert("Incorrect login credentials/ user not register");
     }
     else{
         location.href = "/";
+        alert(firstName,);
     }
     e.preventDefault();
 }
