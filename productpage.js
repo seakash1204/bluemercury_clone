@@ -407,6 +407,10 @@ displayFirstGlider(productArray)
 function displayFirstGlider(array) {
     document.querySelector(".product-page-container").innerText = ""
     array.map(function(ele, ind) {
+        var anchor = document.createElement("a")
+        anchor.setAttribute("href", "productDeatails.html")
+        anchor.style.textDecoration = "none"
+        anchor.style.color = "#90b3d2"
         var div1 = document.createElement("div")
         div1.setAttribute("class", "product-page-child-container")
         var div2 = document.createElement("div")
@@ -465,14 +469,16 @@ function displayFirstGlider(array) {
         div3.append(p1, p2)
         div2.append(i, div3)
         div4.append(img)
+        anchor.append(div4)
         div5.append(p4, p5, p6)
         if (ind % 7 == 0 || ind % 4 == 0) {
             div6.append(i1, i2, i3, i5)
         } else {
             div6.append(i1, i2, i3, i4, i5)
         }
-        div1.append(div2, div4, div5, div6)
+        div1.append(div2, anchor, div5, div6)
         console.log(div1)
+            // anchor.append(div1)
         if (ind != 0)
             document.querySelector(".product-page-container").append(div1)
 
@@ -824,5 +830,4 @@ function viewProductDetails(ele, ind) {
     var array = []
     array.push(ele)
     localStorage.setItem("product", JSON.stringify(array))
-    window.location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/productDeatails.html"
 }
