@@ -1,39 +1,42 @@
-#myAccount{
+#myAccount {
     margin-top: 200px;
     width: 35%;
 }
 
-#btn  > a{
-display: block;
-margin: 15px;
-height: 30px;
-width: 400px;
-font-size: 20px;
-cursor: pointer;
-color: gray;
-padding: 10px;
-text-decoration: none;
-border: 1px solid gray;
-} 
+#btn>a {
+    display: block;
+    margin: 15px;
+    height: 30px;
+    width: 400px;
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid gray;
+}
 
-#parentBox{
+#parentBox {
     display: flex;
 }
 
-#userDetails{
+#userDetails {
     display: flex;
 }
-.userIcon{
+
+.userIcon {
     font-size: 50px;
     border: none;
     background-color: white;
 }
-.name > h3{
+
+.name>h3 {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
 }
-.name > h3 + a{
+
+.name>h3+a {
     border: none;
     text-decoration: underline;
     background-color: white;
@@ -41,31 +44,35 @@ border: 1px solid gray;
     color: black;
 }
 
-#myWishlist > a:first-child{
+#myWishlist>a:first-child {
     margin-right: 5px;
 }
-#myWishlist > i + a{
+
+#myWishlist>i+a {
     margin-left: 5px;
 }
-#myWishlist > a{
+
+#myWishlist>a {
     font-size: 20px;
     text-decoration: none;
     color: #12284c;
 }
-#myWishlist{
+
+#myWishlist {
     /* border: 1px solid blueviolet; */
     margin-top: 200px;
     /* padding: 30px; */
     width: 55%;
     color: #12284c;
 }
-#wishListBox{
+
+#wishListBox {
     padding: 30px;
     width: 47%;
     /* background-color: rgb(210, 234, 234); */
 }
 
-.order{
+.order {
     display: flex;
     font-size: 25px;
     justify-content: space-around;
@@ -73,26 +80,44 @@ border: 1px solid gray;
     box-shadow: #12284c;
 }
 
+<<<<<<< HEAD
 .order > button{
+=======
+.order>button {
+>>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
     border: none;
     font-size: 20px;
     cursor: pointer;
     color: teal;
 }
 
+<<<<<<< HEAD
 
 #child-order{
     margin-top: 20px;
     /* justify-content: space-around; */
 }
 #child-order > .search > input{
+=======
+#child-order {
+    margin-top: 20px;
+    /* justify-content: space-around; */
+}
+
+#child-order>.search>input {
+>>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
     width: 90%;
     height: 30px;
     margin-right: 10px;
     padding-top: 5px;
     font-size: 25px;
 }
+<<<<<<< HEAD
 #child-order > .search > input + i{
+=======
+
+#child-order>.search>input+i {
+>>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
     font-size: 30px;
     color: rgb(64, 140, 165);
     margin-left: -50px;
@@ -102,22 +127,41 @@ border: 1px solid gray;
 
 
 /* medium screen */
+<<<<<<< HEAD
 @media all and (min-width:768px) and (max-width:1150px){
     #parentBox{
         display: block;;
     }
     #myWishlist{
+=======
+
+@media all and (min-width:768px) and (max-width:1150px) {
+    #parentBox {
+        display: block;
+        ;
+    }
+    #myWishlist {
+>>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
         margin-top: 0px;
     }
 }
 
 
 /* small screen */
+<<<<<<< HEAD
 @media all and (min-width:0px) and (max-width:767px){
     #parentBox{
         display: block;
     }
     #myWishlist{
+=======
+
+@media all and (min-width:0px) and (max-width:767px) {
+    #parentBox {
+        display: block;
+    }
+    #myWishlist {
+>>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
         margin-top: 0px;
     }
 }

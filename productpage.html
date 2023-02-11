@@ -1,23 +1,25 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WishList</title>
-    <link rel="stylesheet" href="wishlist.css">
-    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\navbar.css">
-
+    <title>Product Page</title>
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\productpage.css">
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\footer.css">
+
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\navbar.css">
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\slidshow.css">
 </head>
 
 <body>
+    <!-- navbar -->
     <div id="navbar">
         <div id="childdiv1">
             <div>
-                <a id="location" href="https://www.google.com/maps/search/bluemercury+address+new+york/@40.8491735,-74.028829,10z/data=!3m1!4b1" target="_blank"><i id="location" class="fa-solid fa-location-arrow"></i>
+                <a href="https://www.google.com/maps/search/bluemercury+address+new+york/@40.8491735,-74.028829,10z/data=!3m1!4b1" target="_blank"><i class="fa-solid fa-location-arrow"></i>
                     <p>STORE & SPA LOCATOR</p></a>
             </div>
             <div>
@@ -286,48 +288,103 @@
         </div>
     </div>
 
-    <div id="parentBox">
-        <div id="myAccount">
-            <div id="userDetails">
+    <div class="sort">
+        <h5>SORT BY</h5>
+        <select name="select" id="select" value="">
+            <option value="x">Featured By</option>
+            <option value="Price, Low to High">Price, Low to High</option>
+            <option value="Price, High to Low">Price, High to Low</option>
+
+        </select>
+    </div>
+    <div class="product-page-main-container">
+        <div class="filter-container">
+            <div class="category-tag">
+                <p>Category</p>
+                <p class="plus1">+</p>
+                <p class="minus1">-</p>
+            </div>
+            <div class="category-names">
+                <!-- <input type="checkbox" value="Category">
+                <p>category</p> -->
+            </div>
+            <div class="brand-tag">
+                <p>Brand</p>
+                <p class="plus">+</p>
+                <p class="minus">-</p>
+            </div>
+            <div class="brand-names">
+
+            </div>
+
+            <div class="Price-tag">
+                <p>Price</p>
+                <p class="plus2">+</p>
+                <p class="minus2">-</p>
+            </div>
+            <div class="price-range">
                 <div>
-                    <button class="userIcon"><i class="fa-regular fa-circle-user"></i></button>
+                    <input type="checkbox" class="a" value="50">
+                    <p>$0 TO $50 </p>
                 </div>
-                <div class="name">
-                    <h3 id="fname"></h3>
-                    <a href="D:\MAIN PROJECT\bluemercury_clone\in.html">LOGOUT</a>
+                <div>
+                    <input type="checkbox" class="b" value="100">
+                    <p>$51 TO $100 </p>
                 </div>
+                <div>
+                    <input type="checkbox" class="c" value="200">
+                    <p>$101 TO $200 </p>
+                </div>
+                <div>
+                    <input type="checkbox" class="d" value="300">
+                    <p>$201 TO $300 </p>
+                </div>
+                <div>
+                    <input type="checkbox" class="e" value="500">
+                    <p>$301 TO $500 </p>
+                </div>
+                <div>
+                    <input type="checkbox" class="f" value="1000">
+                    <p>$500+ </p>
+                </div>
+
             </div>
 
-
-            <div id="btn">
-                <a class="link" href="accountOverview.html">Account Overview</a>
-                <a class="link" href="myPurchase.html">My Purchases</a>
-                <a class="link" href="wishlist.html">My Wishlist</a>
-            </div>
         </div>
 
 
-        <div id="wishListBox">
-            <div id="myWishlist">
-                <a href="accountOverview.html">My Account</a>
-                <i class="fa-solid fa-greater-than"></i>
-                <a href="accountOverview.html">My Wishlist</a>
-                <h2>WISHLIST</h2>
+        <div class="product-page-container">
+            <div class="product-page-child-container">
+                <!-- <div class="product-page-addto-wishlist">
+                    <i class="fa-regular fa-heart fa-2xl"></i>
+                    <div>
+                        <p>EXCLUSIVE</p>
+                        <p>CONSCIOUS BEAUTY
+                        </p>
+                    </div>
+                </div>
+                <div class="productpage-img">
+                    <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-30treatments-817237011774-1_288x288.jpg?v=1675207230" alt="">
+                </div>
+                <div>
+                    <p id="productpage-product-name">Product name</p>
+                    <p id="productpage-product-category">Product category</p>
+                    <p id="productpage-product-price">Product price</p>
+                </div>
+                <div class="stars">
+                    <i class="fa-solid fa-star fa-2xs"></i>
+                    <i class="fa-solid fa-star fa-2xs"></i>
+                    <i class="fa-solid fa-star fa-2xs"></i>
+                    <i class="fa-solid fa-star fa-2xs"></i>
+                    <i class="fa-regular fa-star-half-stroke fa-2xs"></i>
+                </div>
+                <button class="quick-view">QUICK VIEW</button> -->
+
             </div>
 
-            <div id="wishlistContainer">
-<<<<<<< HEAD
-                <!-- <button class="heart"><i class="fa-solid fa-heart-circle-minus"></i></button> -->
-=======
->>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
-            </div>
+
         </div>
     </div>
-    </div>
-
-
-    <!-- footer -->
-    <br><br><br><br><br>
     <div id="footer">
         <div id="childfooter1">
             <a href="">
@@ -421,10 +478,19 @@
         </div>
 
     </div>
+
+    <script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
+
+
+
 </body>
+<script src="D:\MAIN PROJECT\bluemercury_clone\slider1.js"></script>
+
+<!-- <script src="E:\bluemercury\BLUEMERCURY-CLONE\landingpage\productarray.js"></script> -->
+
+<script src="D:\MAIN PROJECT\bluemercury_clone\productpage.js"></script>
+
+
 
 </html>
-<script src="wishlist.js"></script>
-<script src="D:\MAIN PROJECT\bluemercury_clone\slider1.js"></script>
 <script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/1bf84dec3d.js" crossorigin="anonymous"></script>

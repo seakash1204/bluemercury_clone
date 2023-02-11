@@ -1,93 +1,108 @@
-#wishListBox{
+#wishListBox {
     border: 1px solid blueviolet;
     margin-top: 200px;
     padding: 30px;
     width: 55%;
 }
-#wishlistContainer{
+
+#wishlistContainer {
     width: 100%;
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+<<<<<<< HEAD
     gap: 20px;    
+=======
+    gap: 20px;
+>>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
 }
 
-
-#wishlistContainer > div{
+#wishlistContainer>div {
     width: 100%;
 }
 
-#wishlistContainer > div > img{
+#wishlistContainer>div>img {
     width: 80%;
     margin: auto;
 }
 
-#wishlistContainer > div > button{
-    margin-top: 60px;
+#myAccount {
+    margin-right: 20px;
+}
+
+#wishlistContainer>div>button {
+    margin-top: 20px;
     display: block;
     width: 100%;
     height: 30px;
     border-color: rgb(119, 182, 184);
     border: none;
     border-radius: 20px;
-    background-color: yellow;
+    background-color: #adbbcc;
+    margin-bottom: -10px;
 }
-#wishlistContainer > div > button:hover{
+
+#wishlistContainer>div>button:hover {
     background-color: teal;
     cursor: pointer;
 }
 
-#myWishlist > a:first-child{
+#myWishlist>a:first-child {
     margin-right: 5px;
 }
-#myWishlist > i + a{
+
+#myWishlist>i+a {
     margin-left: 5px;
 }
-#myWishlist > a{
+
+#myWishlist>a {
     font-size: 20px;
     text-decoration: none;
     color: #12284c;
 }
-#myWishlist{
+
+#myWishlist {
     color: #12284c;
 }
 
-
-#myAccount{
+#myAccount {
     margin-top: 200px;
     width: 35%;
 x}
 
-#btn  > a{
-display: block;
-margin: 15px;
-height: 30px;
-width: 400px;
-font-size: 20px;
-cursor: pointer;
-color: gray;
-padding: 10px;
-text-decoration: none;
-border: 1px solid gray;
-} 
+#btn>a {
+    display: block;
+    margin: 15px;
+    height: 30px;
+    width: 400px;
+    font-size: 20px;
+    cursor: pointer;
+    color: gray;
+    padding: 10px;
+    text-decoration: none;
+    border: 1px solid gray;
+}
 
-#parentBox{
+#parentBox {
     display: flex;
 }
 
-#userDetails{
+#userDetails {
     display: flex;
 }
-.userIcon{
+
+.userIcon {
     font-size: 50px;
     border: none;
     background-color: white;
 }
-.name > h3{
+
+.name>h3 {
     margin-top: 5px;
     margin-left: 5px;
     margin-bottom: 5px;
 }
-.name > h3 + a{
+
+.name>h3+a {
     border: none;
     text-decoration: underline;
     background-color: white;
@@ -96,14 +111,7 @@ border: 1px solid gray;
 }
 
 
-.heart{
-    background-color: white;
-    border : none;
-    color: #5e769b;
-    font-size: 25px;
-    cursor: pointer;
-}
-
+/* <<<<<<< HEAD */
 @media all and (min-width:768px) and (max-width:1150px){
     #parentBox{
         display: block;;
@@ -116,11 +124,27 @@ border: 1px solid gray;
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         gap: 20px;    
+=======
+@media all and (min-width:768px) and (max-width:1150px) {
+    #parentBox {
+        display: block;
+        ;
+    }
+    #myWishlist {
+        margin-top: 0px;
+    }
+    #wishlistContainer {
+        width: 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 20px;
+>>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
     }
 }
 
 
 /* small screen */
+<<<<<<< HEAD
 @media all and (min-width:0px) and (max-width:767px){
     #parentBox{
         display: block;
@@ -129,6 +153,17 @@ border: 1px solid gray;
         margin-top: 0px;
     }
     #wishlistContainer{
+=======
+
+@media all and (min-width:0px) and (max-width:767px) {
+    #parentBox {
+        display: block;
+    }
+    #myWishlist {
+        margin-top: 0px;
+    }
+    #wishlistContainer {
+>>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
         width: 100%;
         display: grid;
         grid-template-columns: repeat(1, 1fr);

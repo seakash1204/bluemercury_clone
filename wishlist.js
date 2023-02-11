@@ -1,30 +1,37 @@
-var wishlistDetails = JSON.parse(localStorage.getItem("cart-added-product")) || [];
+var wishlistDetails = JSON.parse(localStorage.getItem("wishlist-added-product")) || [];
+
+
+
+
 
 displayData(wishlistDetails);
+
 function displayData(wishlistDetails) {
-    wishlistDetails.map(function (elem) {
-        document.getElementById("#wishlistContainer").textContent = "";
+    console.log(wishlistDetails)
+    document.getElementById("wishlistContainer").textContent = "";
+    wishlistDetails.map(function(elem) {
+
         var productDetails = document.createElement("div");
         var productCategory = document.createElement("p");
-        productCategory.textContent = elem.name;
+        productCategory.textContent = elem.brand;
         var productImage = document.createElement("img");
-        productImage.setAttribute("src", elem.image_url)
+        productImage.setAttribute("src", elem.img_url)
         var productName = document.createElement("h2");
-        productName.textContent = elem.pName;
+        productName.textContent = elem.name;
         var productType = document.createElement("p");
-        productType.textContent = elem.type;
+        productType.textContent = elem.desc;
         var productPrice = document.createElement("p");
         productPrice.textContent = elem.price;
 
         var addToBag = document.createElement("button");
         addToBag.textContent = "ADD TO BAG";
-        addToBag.addEventListener("click", function(){
+        addToBag.addEventListener("click", function() {
             bag(elem)
         })
         var removeCart = document.createElement("button");
         removeCart.textContent = "REMOVE FROM WISHLIST"
-        removeCart.addEventListener("click", function(){
-            removeFromCart(elem)
+        removeCart.addEventListener("click", function() {
+            remove(elem)
         });
 
         productDetails.append(productCategory, productImage, productName, productType, productPrice, addToBag, removeCart)
@@ -32,19 +39,26 @@ function displayData(wishlistDetails) {
     })
 }
 
-var cart = JSON.parse(localStorage.getItem("cart-added-product")) || []
-function bag(elem, i){
-    cart.push(elem)
-    localStorage.setItem("move-to-cart", JSON.stringify(cart));
+var cart = JSON.parse(localStorage.getItem("wishlist-added-product")) || []
 
-    wishlistDetails.splice(i, 1)
-    localStorage.setItem("cart-added-product", JSON.stringify(wishlistDetails))
+function bag(elem, i) {
+    cart.push(elem)
+    localStorage.setItem("cart-added-product", JSON.stringify(cart));
+
+    localStorage.setItem("wishlist-added-product", JSON.stringify(wishlistDetails))
     displayData(wishlistDetails)
 }
 
 var baglist = JSON.parse(localStorage.getItem("cartValue")) || []
-function remove(elem, i){
+
+function remove(elem, i) {
     wishlistDetails.splice(i, 1)
-    localStorage.setItem("currentpage", JSON.stringify(wishlistDetails))
+    localStorage.setItem("wishlist-added-product", JSON.stringify(wishlistDetails))
     displayData(wishlistDetails)
 }
+
+var userName = JSON.parse(localStorage.getItem("formData"))
+
+
+
+document.getElementById("fname").innerText = userName[0].fname + userName[0].lname

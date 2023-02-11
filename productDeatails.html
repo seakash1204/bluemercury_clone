@@ -5,19 +5,21 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WishList</title>
-    <link rel="stylesheet" href="wishlist.css">
+    <title>Document</title>
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\navbar.css">
 
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\footer.css">
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\slidshow.css">
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\footer.css">
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\productDetails.css">
 </head>
 
 <body>
+    <!-- navbar -->
     <div id="navbar">
         <div id="childdiv1">
             <div>
-                <a id="location" href="https://www.google.com/maps/search/bluemercury+address+new+york/@40.8491735,-74.028829,10z/data=!3m1!4b1" target="_blank"><i id="location" class="fa-solid fa-location-arrow"></i>
+                <a href="https://www.google.com/maps/search/bluemercury+address+new+york/@40.8491735,-74.028829,10z/data=!3m1!4b1" target="_blank"><i class="fa-solid fa-location-arrow"></i>
                     <p>STORE & SPA LOCATOR</p></a>
             </div>
             <div>
@@ -286,48 +288,157 @@
         </div>
     </div>
 
-    <div id="parentBox">
-        <div id="myAccount">
-            <div id="userDetails">
+    <div id="slideset">
+        <div class="picSlide">
+            <img src="file:///C:/Users/admin/Desktop/10.PNG" alt="">
+
+        </div>
+        <div class="picSlide">
+            <img src="file:///C:/Users/admin/Desktop/11.PNG" alt="">
+
+        </div>
+        <div class="picSlide">
+            <img src="https://cdn.shopify.com/s/files/1/0283/0185/2747/files/wide-awake-eyes-hero-des_1300x.jpg?v=1674755113" alt="">
+            <div class="slide_text3">
+                <h4>ROUTINE LUNE+ASTER</h4>
+                <h2>Wake Up Like This</h2>
+                <p>Want to make your eyes look as big, bright, and wide awake as possible? Try these!</p>
+                <br>
+                <p>SHOP NOW</p>
+            </div>
+        </div>
+    </div>
+    <br><br><br><br><br><br><br>
+
+    <div id="dot">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+    </div>
+
+
+    <div class="product-details-container">
+        <div class="product-img">
+            <div>
+                <img id="product-img1" src="" alt="">
+            </div>
+            <div>
+                <img id="product-img2" src="" alt="">
+            </div>
+        </div>
+        <div class="product-details">
+            <div>
+                <h3 id="brand-name">BRAND NAME</h3>
                 <div>
-                    <button class="userIcon"><i class="fa-regular fa-circle-user"></i></button>
-                </div>
-                <div class="name">
-                    <h3 id="fname"></h3>
-                    <a href="D:\MAIN PROJECT\bluemercury_clone\in.html">LOGOUT</a>
+                    <span>4.5</span><i class="fa-solid fa-star"></i>
+
                 </div>
             </div>
+            <h2 id="product-name">Product Name</h2>
 
+            <h3 id="product-price">PRODUCT PRICE</h3>
+            <p id="product-desc">PRODUCT DESC</p>
+            <div class="buttons">
+                <button id="cart-btn">ADD TO BAG</button>
 
-            <div id="btn">
-                <a class="link" href="accountOverview.html">Account Overview</a>
-                <a class="link" href="myPurchase.html">My Purchases</a>
-                <a class="link" href="wishlist.html">My Wishlist</a>
+                <button id="min-btn">-</button>
+                <button id="quantity-btn">1</button>
+                <button id="max-btn">+</button>
+                <i id="wishlist-btn" class="fa-regular fa-heart fa-2xl"></i>
             </div>
-        </div>
-
-
-        <div id="wishListBox">
-            <div id="myWishlist">
-                <a href="accountOverview.html">My Account</a>
-                <i class="fa-solid fa-greater-than"></i>
-                <a href="accountOverview.html">My Wishlist</a>
-                <h2>WISHLIST</h2>
-            </div>
-
-            <div id="wishlistContainer">
-<<<<<<< HEAD
-                <!-- <button class="heart"><i class="fa-solid fa-heart-circle-minus"></i></button> -->
-=======
->>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
-            </div>
+            <button id="return">Shipping & Returns</button>
         </div>
     </div>
+
+    <div class="product-information">
+        <h3>Product Information</h3>
+        <p>Resurface and clarify skin in 1 simple step. This power-packed treatment contains glycolic and salicylic acid, improving skin's tone and texture while reducing pore size and chamomile and lavender to calm and soothe. What you are left with is
+            firmer skin with a radiant and renewed glow!</p>
+        <h3>Key Benefits</h3>
+        <ul>
+            <li>Immediately improves skin cell exfoliation.</li>
+            <li>Immediately improves skin cell exfoliation.</li>
+            <li>Reduces and improves pore size.</li>
+            <li>Improves the appearance of fine lines and wrinkles.</li>
+            <li>Improves skin tone, texture and clarity.</li>
+            <li>Perfect as a treatment for dull or acne-prone skin.</li>
+        </ul>
+        <h3>Claims</h3>
+        <ul>
+            <li>Gluten-free & vegan.</li>
+            <li>Dermatologist & allergy tested.</li>
+            <li>Paraben & phthalate free.</li>
+            <li>Synthetic fragrance-free.</li>
+            <li>Sulfate-free.</li>
+            <li>Free of synthetic dyes.</li>
+            <li>No animal testing.</li>
+        </ul>
+        <h3>UPC</h3>
+        <ul>
+            <li>817237011606</li>
+        </ul>
     </div>
+    <div class="additional-details">
+        <table>
+
+            <h3>Additional Details</h3>
+
+            <tbody>
+                <tr>
+                    <td><b>BENEFITS	</b></td>
+                    <td>exfoliating; anti-aging; firming</td>
+                </tr>
+                <tr>
+                    <td><b>CONCERNS</b></td>
+                    <td>fine lines and wrinkles; loss of firmness; black heads and visible pores; acne and blemishes</td>
+
+                </tr>
+                <tr>
+                    <td><b>FORMULATION	</b></td>
+                    <td>towelette</td>
+                </tr>
+                <tr>
+                    <td>INGREDIENT PREFERENCE </td>
+                    <td>antioxidants; dermatologist tested; fragrance free; gluten free; hypoallergenic; paraben free; phthalates free; sulfate free; allergy tested; aha / glycolic acid</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div class="ingriands">
+        <h3>Ingredients</h3>
+        <ul>
+            <li>Glycolic and Salicylic Acid: Help reduce pore size, reduce the appearance of fine lines and improve the skin’s tone, texture and clarity.
+            </li>
+            <li>Vitamin K: Helps to reduce the appearance of spider veins and combats dry, rosacea-like patches.
+            </li>
+            <li>Antioxidant Bilberry Extract: Helps promote an even skin tone.
+            </li>
+            <li>Chamomile and Lavender: Assist in calming and soothing irritation.
+            </li>
+        </ul>
+    </div>
+    <div class="use">
+        <h3>How To Use</h3>
+        <ul>
+            <li>After cleansing and drying skin, wipe pre-soaked towelette over face, neck and décolleté while avoiding eye area.
+            </li>
+            <li>Do not rinse off.
+            </li>
+            <li>Follow with moisturizer.
+            </li>
+            <li>Recommend starting 3 times a week and building up to every day.
+            </li>
+        </ul>
+        <p><b>Please be aware:</b>Please be aware: Avoid eyes and eye area. Rinse with cool water if eye contact should occur.
+        </p>
+    </div>
+    <br><br><br><br><br><br><br><br>
+
+
+
 
 
     <!-- footer -->
-    <br><br><br><br><br>
     <div id="footer">
         <div id="childfooter1">
             <a href="">
@@ -421,10 +532,12 @@
         </div>
 
     </div>
+
+
 </body>
 
 </html>
-<script src="wishlist.js"></script>
 <script src="D:\MAIN PROJECT\bluemercury_clone\slider1.js"></script>
+
+<script src="D:\MAIN PROJECT\bluemercury_clone\productDetails.js"></script>
 <script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/1bf84dec3d.js" crossorigin="anonymous"></script>

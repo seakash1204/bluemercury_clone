@@ -5,15 +5,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WishList</title>
-    <link rel="stylesheet" href="wishlist.css">
+    <title>Document</title>
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\navbar.css">
 
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\footer.css">
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\slidshow.css">
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\event.css">
 </head>
 
 <body>
+    <!-- navbar -->
     <div id="navbar">
         <div id="childdiv1">
             <div>
@@ -286,48 +287,30 @@
         </div>
     </div>
 
-    <div id="parentBox">
-        <div id="myAccount">
-            <div id="userDetails">
-                <div>
-                    <button class="userIcon"><i class="fa-regular fa-circle-user"></i></button>
-                </div>
-                <div class="name">
-                    <h3 id="fname"></h3>
-                    <a href="D:\MAIN PROJECT\bluemercury_clone\in.html">LOGOUT</a>
-                </div>
-            </div>
 
-
-            <div id="btn">
-                <a class="link" href="accountOverview.html">Account Overview</a>
-                <a class="link" href="myPurchase.html">My Purchases</a>
-                <a class="link" href="wishlist.html">My Wishlist</a>
-            </div>
+    <div id="event-parent-container">
+        <div id="child-container1">
+            <h3>BLUMERCURY PRESENT</h3>
+            <H1>#MASTERCLASS</H1>
         </div>
-
-
-        <div id="wishListBox">
-            <div id="myWishlist">
-                <a href="accountOverview.html">My Account</a>
-                <i class="fa-solid fa-greater-than"></i>
-                <a href="accountOverview.html">My Wishlist</a>
-                <h2>WISHLIST</h2>
+        <div id="child-container2">
+            <div>
+                <h2>Dyson Masterclass
+                </h2>
+                <p>You're invited to join Bluemercury for a masterclass with Dyson global ambassador and celebrity stylist Irinel de León. Learn how to create holiday-perfect hairstyles from start to finish using the brand's innovative Supersonic Hair Dryer
+                    and Coral Hair Straightener!
+                </p>
+                <a href=""><button>WATCH REPLAY</button></a>
+                <p>Plus, receive a Detangling Comb with your purchase of the Dyson Special Gift Edition Supersonic™ Hair Dryer or the Dyson Special Gift Edition Corrale™ Hair Straightener</p>
+            </div>
+            <div>
+                <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRcmAXUaFlWVgry8AkysxsHHc8pjomSPIsYwi_QqKcKXX0UJPQfXBODEsCL8Veo_40xe78&usqp=CAU" alt="">
             </div>
 
-            <div id="wishlistContainer">
-<<<<<<< HEAD
-                <!-- <button class="heart"><i class="fa-solid fa-heart-circle-minus"></i></button> -->
-=======
->>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
-            </div>
         </div>
     </div>
-    </div>
-
 
     <!-- footer -->
-    <br><br><br><br><br>
     <div id="footer">
         <div id="childfooter1">
             <a href="">
@@ -421,10 +404,42 @@
         </div>
 
     </div>
+    <!-- <script>
+        let slideIndex = 1;
+        showSlides(slideIndex);
+
+        function slideShow(n) {
+            showSlides(slideIndex += n)
+        }
+
+        function showSlides(n) {
+            let i;
+            let slides = document.querySelectorAll("#slides")
+            if (n > slides.length) {
+                slideIndex = 1;
+            }
+            if (n < 1) {
+                slideIndex = slides.length
+            }
+
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+
+            slides[slideIndex - 1].style.display = "flex"
+        }
+        let dotIndex = 1;
+
+        function currentSlide(n) {
+            dotSlide(dotIndex = n);
+        }
+    </script> -->
+
+    <script src="D:\MAIN PROJECT\bluemercury_clone\slider1.js"></script>
+    <script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
+
+
 </body>
 
+
 </html>
-<script src="wishlist.js"></script>
-<script src="D:\MAIN PROJECT\bluemercury_clone\slider1.js"></script>
-<script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/1bf84dec3d.js" crossorigin="anonymous"></script>

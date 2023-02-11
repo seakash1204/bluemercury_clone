@@ -5,12 +5,15 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WishList</title>
-    <link rel="stylesheet" href="wishlist.css">
-    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\navbar.css">
-
+    <title>Your Bag</title>
+    <link rel="stylesheet" href="newcart.css">
+    <!-- <link rel="stylesheet" href="navbar.css"> -->
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\footer.css">
+
+    <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\navbar.css">
     <link rel="stylesheet" href="D:\MAIN PROJECT\bluemercury_clone\slidshow.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 </head>
 
 <body>
@@ -285,49 +288,99 @@
             <p>Free Gift with Purchase..</p>
         </div>
     </div>
-
-    <div id="parentBox">
-        <div id="myAccount">
-            <div id="userDetails">
-                <div>
-                    <button class="userIcon"><i class="fa-regular fa-circle-user"></i></button>
-                </div>
-                <div class="name">
-                    <h3 id="fname"></h3>
-                    <a href="D:\MAIN PROJECT\bluemercury_clone\in.html">LOGOUT</a>
-                </div>
-            </div>
-
-
-            <div id="btn">
-                <a class="link" href="accountOverview.html">Account Overview</a>
-                <a class="link" href="myPurchase.html">My Purchases</a>
-                <a class="link" href="wishlist.html">My Wishlist</a>
+    <div id="navbar"></div>
+    <div id="body">
+        <h1 id="your_bag">YOUR BAG</h1>
+        <p id="no_items">Your cart(No. of items)</p>
+        <div id="cart_header">
+            <p>Ready to Ship</p>
+            <div>
+                <p>Price</p>
+                <p>Quantity</p>
+                <p>Total</p>
             </div>
         </div>
+        <hr id="horizontal_line">
+        <div class="cart-product-main-container">
 
 
-        <div id="wishListBox">
-            <div id="myWishlist">
-                <a href="accountOverview.html">My Account</a>
-                <i class="fa-solid fa-greater-than"></i>
-                <a href="accountOverview.html">My Wishlist</a>
-                <h2>WISHLIST</h2>
-            </div>
+            <!-- added cart data will be appended here -->
+            <!-- <div class="cart-container">
+                <div class="img">
+                    <img id="img" src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-1oz30ml-867999000363-1_240x240.jpg?v=1671313061" alt="">
+                </div>
+                <div class="cart-product-details">
+                    <p id="brand">Brand</p>
+                    <p id="desc">Descriptiom</p>
 
-            <div id="wishlistContainer">
-<<<<<<< HEAD
-                <!-- <button class="heart"><i class="fa-solid fa-heart-circle-minus"></i></button> -->
-=======
->>>>>>> 7d385dcbbefc90edd26849360cbc7ac5147b0340
-            </div>
+                </div>
+                <div class="single-price">
+                    <p id="price">25</p>
+                </div>
+                <div class="quantity-btn">
+                    <div class="min-max">
+                        <button id="min">-</button>
+                        <button id="quantity">5</button>
+                        <button id="max">+</button>
+                    </div>
+                    <div id="remove">remove</div>
+                </div>
+                <div class="total">
+                    <p id="total-price">q*p</p>
+                </div>
+
+            </div> -->
+
+            <!-- <div class="cart-container">
+                <div class="img">
+                    <img id="img" src="https://cdn.shopify.com/s/files/1/0283/0185/2747/products/variant_images-size-1oz30ml-867999000363-1_240x240.jpg?v=1671313061" alt="">
+                </div>
+                <div class="cart-product-details">
+                    <p id="brand">Brand</p>
+                    <p id="desc">Descriptiom</p>
+
+                </div>
+                <div class="single-price">
+                    <p id="price">25</p>
+                </div>
+                <div class="quantity-btn">
+                    <div class="min-max">
+                        <button id="min">-</button>
+                        <button id="quantity">5</button>
+                        <button id="max">+</button>
+                    </div>
+                    <div id="remove">remove</div>
+                </div>
+                <div class="total">
+                    <p id="total-price">q*p</p>
+                </div>
+
+            </div> -->
         </div>
-    </div>
+
+        <div id="cart_container"></div>
+        <div id="offers">
+            <p>
+                Our gift for you
+            </p>
+            <p>Free trial size products with your qualifying purchase</p>
+        </div>
+        <hr>
+
+        <div id="subtotal">
+            <div class="quantityprice">
+                <p id="subprice">$45</p>
+            </div>
+            <h3 id="subtotal_price">Subtotal(Price)</h3>
+            <p>Shipping,Taxes,Beauty Cards, and additional discounts applied at the checkout</p>
+        </div>
+
+        <a href="D:\MAIN PROJECT\bluemercury_clone\billing address.html">
+            <div id="div"><button id="checkout_button">CHECKOUT</button></div>
+        </a>
+
     </div>
 
-
-    <!-- footer -->
-    <br><br><br><br><br>
     <div id="footer">
         <div id="childfooter1">
             <a href="">
@@ -421,10 +474,15 @@
         </div>
 
     </div>
+
 </body>
 
 </html>
-<script src="wishlist.js"></script>
+
+<!-- <script type="module">
+    import { footer, navbar } from "./components/navbar.js" document.getElementById("footer").innerHTML = footer() document.getElementById('navbar').innerHTML = navbar()
+
+</script> -->
+<script src="newcart.js"></script>
 <script src="D:\MAIN PROJECT\bluemercury_clone\slider1.js"></script>
 <script src="https://kit.fontawesome.com/977289aa03.js" crossorigin="anonymous"></script>
-<script src="https://kit.fontawesome.com/1bf84dec3d.js" crossorigin="anonymous"></script>
