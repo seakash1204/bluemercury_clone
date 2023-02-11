@@ -407,7 +407,9 @@ console.log("hii")
 function displayFirstGlider(array) {
     array.map(function(ele, ind) {
         var anchor = document.createElement("a")
-        anchor.setAttribute("href", "file:///D:/MAIN%20PROJECT/bluemercury_clone/productDeatails.html")
+        anchor.setAttribute('href', "productDeatails.html")
+        anchor.style.textDecoration = "none"
+        anchor.style.color = "#90b3d2"
         var div1 = document.createElement("div")
         div1.setAttribute("class", "product-box")
         var div2 = document.createElement("div")
@@ -485,6 +487,10 @@ displayFirstGlider2(productArray);
 
 function displayFirstGlider2(productArray) {
     productArray.map(function(ele, ind) {
+        var anchor = document.createElement("a")
+        anchor.setAttribute("href", "productDeatails.html")
+        anchor.style.textDecoration = "none"
+        anchor.style.color = "#90b3d2"
         var div1 = document.createElement("div")
         div1.setAttribute("class", "product-box2")
         var div2 = document.createElement("div")
@@ -524,7 +530,8 @@ function displayFirstGlider2(productArray) {
         console.log(ind)
 
         if (ind > 10)
-            document.querySelector(".swiper-wrapper").append(div1)
+            anchor.append(div1)
+        document.querySelector(".swiper-wrapper").append(anchor)
         div1.addEventListener("click", function() {
 
             gotoDetails(ele, ind);
@@ -540,5 +547,5 @@ function gotoDetails(ele, ind) {
     p.push(ele);
     console.log(p)
     localStorage.setItem("product", JSON.stringify(p))
-    window.location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/productDeatails.html"
+
 }
