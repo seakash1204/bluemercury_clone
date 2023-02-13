@@ -18,6 +18,7 @@ const signUp = e => {
         document.querySelector('form').reset();
         document.getElementById('fname').focus();
         alert("Account Created.\n\nPlease Sign In using the link below.");
+        window.location.href = "in.html"
     } else {
         alert("Ooopppssss... Duplicate found!!!\nYou have already signed up");
     }
@@ -34,7 +35,7 @@ function signIn(e) {
     if (!exist) {
         alert("Incorrect login credentials/ user not register");
     } else {
-        location.href = "file:///D:/MAIN%20PROJECT/bluemercury_clone/index.html";
+        location.href = "index.html";
         alert(firstName, );
     }
     e.preventDefault();

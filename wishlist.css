@@ -1,6 +1,6 @@
 #wishListBox {
     border: 1px solid blueviolet;
-    margin-top: 200px;
+    margin-top: 50px;
     padding: 30px;
     width: 55%;
 }
@@ -61,7 +61,7 @@
 }
 
 #myAccount {
-    margin-top: 200px;
+    margin-top: 50px;
     width: 35%;
 }
 

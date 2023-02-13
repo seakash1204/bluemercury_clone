@@ -3,7 +3,7 @@ document.getElementById("product-img1").setAttribute("src", product[0].img_url)
 document.getElementById("product-img2").setAttribute("src", product[0].img_url)
 document.getElementById("brand-name").innerText = product[0].brand.toUpperCase()
 document.getElementById("product-name").innerText = product[0].name
-document.getElementById("product-price").innerText = "$" + product[0].price
+document.getElementById("product-price").innerText = product[0].price
 document.getElementById("product-desc").innerText = product[0].desc
 
 

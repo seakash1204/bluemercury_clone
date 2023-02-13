@@ -21,7 +21,19 @@ function displayData(wishlistDetails) {
         var productType = document.createElement("p");
         productType.textContent = elem.desc;
         var productPrice = document.createElement("p");
-        productPrice.textContent = elem.price;
+        // productPrice.textContent        
+        // for (i = 1; i < elem.price; i++) {
+        //     productPrice.textContent += elem.price[i];
+        // }
+        productPrice.textContent = elem.price
+        const chars = productPrice.textContent.split("$");
+        console.log(productPrice)
+        productPrice.textContent = chars[1];
+        console.log(chars[1])
+
+
+
+        // console.log(productPrice.textContent, "hii")
 
         var addToBag = document.createElement("button");
         addToBag.textContent = "ADD TO BAG";
@@ -39,7 +51,7 @@ function displayData(wishlistDetails) {
     })
 }
 
-var cart = JSON.parse(localStorage.getItem("wishlist-added-product")) || []
+var cart = JSON.parse(localStorage.getItem("cart-added-product")) || []
 
 function bag(elem, i) {
     cart.push(elem)

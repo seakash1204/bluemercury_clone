@@ -154,9 +154,14 @@
                 <option value="" Selected>India</option>
             </select>
             </div>
-            <div class="btn">
-                save and continue
-            </div>
+
+            <!-- <div class="btn">
+                    save and continue
+                </div> -->
+
+            <div class="btn">save and continue</div>
+
+
 
         </form>
     </div>
@@ -167,6 +172,7 @@
     document.querySelector(".btn").addEventListener("click", nextpage);
 
     function nextpage() {
+        event.preventDefault();
 
         var name = document.querySelector(".a").value
         var no = document.querySelector(".b").value
@@ -178,9 +184,14 @@
         if (name == "" || no == "" || pin == "" || address == "" || land == "" || town == "" || state == "") {
             alert("Please Fill All The Details")
         } else {
-            location.replace("file:///D:/MAIN%20PROJECT/bluemercury_clone/payment.html")
+            console.log("hii")
+                // document.querySelector(".anchor").setAttribute('href', "payment.html")
+
+            // document.querySelector(".btn")
+            // location.replace("payment.html")
+            window.location.href = ("payment.html")
         }
 
-        console.log(name)
+        // console.log(name)
     }
 </script>
