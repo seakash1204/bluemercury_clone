@@ -1,7 +1,15 @@
 
 # bluemercury
 
-This is the clone of bluemercury website.Clients can order skin care products or cosmatic products from the website.
+
+Our team of five members has created a clone of the Bluemercury website, a leading beauty and skincare retailer in the US. It offers a seamless e-commerce experience, allowing users to browse products, make purchases, and receive personalized recommendations for their skincare needs.
+
+
+
+
+
+
+
 
 
 
